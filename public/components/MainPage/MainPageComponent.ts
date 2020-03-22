@@ -9,7 +9,7 @@ class MainPageComponent extends BasicComponent {
     private _headSelector : SelectorString =  new SelectorString(".main-container__row");
     private _adColumnSelector : SelectorString =  new SelectorString(".ad-column");
 
-    create(identities: Array<RouteArgument> = null) {
+    create(identities: Array<string> = null) {
         const primitiveComponent : PrimitiveComponent = new PrimitiveComponent({}, this.parent);
         primitiveComponent.render();
         this.renderTo(this._headSelector);

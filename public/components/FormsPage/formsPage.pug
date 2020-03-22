@@ -1,1 +1,13 @@
 div.col-4.offset-4
+    div.row
+        if formType === 'signup'
+            div.forms-page__name Sign up
+        if formType === 'login'
+            div.forms-page__name Login
+    if formType === 'signup'
+        input.form-control(placeholder='full name')
+    div.form-group
+        input.form-control(placeholder='email' type='email')
+    div.form-group
+        input.form-control(placeholder='password' type='password')
+

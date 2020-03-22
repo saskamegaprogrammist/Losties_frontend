@@ -7,7 +7,8 @@ class FormsPageComponent extends BasicComponent {
 
     private _headSelector : SelectorString =  new SelectorString(".main-container__row");
 
-    create(identities: Array<RouteArgument> = null) {
+    create(identities: Array<string> = null, type : string = null) {
+        this.data.formType = type;
         const primitiveComponent : PrimitiveComponent = new PrimitiveComponent({}, this.parent);
         primitiveComponent.render();
         this.renderTo(this._headSelector);

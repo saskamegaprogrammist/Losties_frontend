@@ -1,5 +1,6 @@
 import Route from "./Route";
 import BasicComponent from "../components/BasicComponent";
+import {emptyArg, RouteArgument} from "./RouteArgument";
 
 class Router {
     private static __instance: Router;
@@ -23,8 +24,19 @@ class Router {
         window.history.back();
     }
 
+    getStringArguments(identities : Array<RouteArgument>) : Array<string> {
+        let stringArgs : Array<string> = new Array<string>();
+        identities.forEach(ident => {
+            if (ident.argument !== emptyArg) {
+                stringArgs.push(ident.argument);
+            }
+        });
+        return stringArgs;
+    }
+
     create(route : Route, identities : Array<RouteArgument>) {
-        let path : string = route.createPath(identities);
+        const identitiesCloned : Array<RouteArgument> = [...identities];
+        let path : string = route.createPath(identitiesCloned);
         if (window.location.pathname !== path) {
             window.history.pushState(
                 {'id':identities},
@@ -33,7 +45,7 @@ class Router {
             );
         };
         const component : BasicComponent =  new route.componentName({}, this._globalParentElement);
-        component.create(identities);
+        component.create(this.getStringArguments(identities));
     }
 
     go(routeName : string, ...identities : Array<RouteArgument>) {
@@ -50,9 +62,10 @@ class Router {
     open(keyWords : Array<string>, identities : Array<string>, path : string) {
         console.log(keyWords, identities);
         for (let route of this._routes) {
-            if (route.compare(keyWords)) {
+            const keywordsCloned : Array<string> = [...keyWords];
+            if (route.compare(keywordsCloned)) {
                 const component : BasicComponent =  new route.componentName({}, this._globalParentElement);
-                component.create();
+                component.create(identities, route.keyWord);
                 return;
             }
         }

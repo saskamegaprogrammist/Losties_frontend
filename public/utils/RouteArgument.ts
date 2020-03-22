@@ -4,12 +4,14 @@ enum ArgTypes {
     search
 };
 
+const emptyArg : string = "";
+
 class RouteArgument {
-    private _argument : number;
+    private _argument : string;
     private _type: number;
-    constructor(argument : number = null, type : keyof typeof ArgTypes) {
+    constructor(argument : string = null, type : keyof typeof ArgTypes) {
         if (argument === null || argument === undefined) {
-            this._argument = -1;
+            this._argument = emptyArg;
             this._type = ArgTypes["undefined"];
         } else {
             this._argument = argument;
@@ -17,7 +19,7 @@ class RouteArgument {
         }
     }
     getPath() {
-        if (this._argument === -1) {
+        if (this._argument === emptyArg) {
             return "";
         } else {
             switch (this._type) {
@@ -34,3 +36,5 @@ class RouteArgument {
         return this._argument;
     }
 }
+
+export {emptyArg, RouteArgument};

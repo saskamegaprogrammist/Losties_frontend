@@ -1,10 +1,11 @@
 import SelectorString from "../utils/SelectorString";
+import EditableObject from "../utils/EditableObject";
 
 class BasicComponent {
-	private _data : object;
+	private _data : EditableObject;
 	private _parent : HTMLElement;
 
-	constructor(data:object, parent:HTMLElement) {
+	constructor(data:EditableObject, parent:HTMLElement) {
 		this._data = data;
 		this._parent = parent;
 
@@ -13,7 +14,7 @@ class BasicComponent {
 		return this._data;
 	}
 
-	set data(dataToSet:object) {
+	set data(dataToSet:EditableObject) {
 		this._data = {...dataToSet};
 	}
 
@@ -25,7 +26,7 @@ class BasicComponent {
 		this._parent = parent;
 	}
 
-	create(identities : Array<RouteArgument> = null) {
+	create(identities : Array<string> = null, type : string = null) {
 
 	}
 

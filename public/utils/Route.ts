@@ -1,4 +1,5 @@
 import {strict} from "assert";
+import {RouteArgument} from "./RouteArgument";
 
 class Route {
     private _parentRoute: Route;
