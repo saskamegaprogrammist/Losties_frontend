@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
 	context: __dirname ,
 	mode: "development",
-	entry: ['babel-polyfill', './public/main.js'],
+	entry: ['babel-polyfill', './public/main.ts'],
 	output:{
 		path: path.resolve(__dirname ,'packed'),
 		filename: '\main.js',
@@ -15,6 +15,9 @@ module.exports = {
 		rewrites: [
 			{ from: /\//, to: '/index.html'}
 		]
+	},
+	resolve: {
+		extensions: [ '.tsx', '.ts', '.js' ],
 	},
 
 	module:{
@@ -39,6 +42,11 @@ module.exports = {
 				exclude: [/node_modules/, /worker/],
 				use: ["eslint-loader"],
 
+			},
+			{
+				test: /\.tsx?$/,
+				use: 'ts-loader',
+				exclude: /node_modules/,
 			},
 			{
 				test: /\.pug$/,
