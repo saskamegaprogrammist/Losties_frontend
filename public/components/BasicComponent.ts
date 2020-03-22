@@ -25,7 +25,7 @@ class BasicComponent {
 		this._parent = parent;
 	}
 
-	create() {
+	create(identities : Array<RouteArgument> = null) {
 
 	}
 

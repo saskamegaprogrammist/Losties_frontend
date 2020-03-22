@@ -1,7 +1,7 @@
-import BasicComponent from "../../../BasicComponent";
+import BasicComponent from "../../BasicComponent";
 const adColumnTemplate = require('./adColumn.pug');
 import './ad-column.scss';
-import SelectorString from "../../../../utils/SelectorString";
+import SelectorString from "../../../utils/SelectorString";
 
 class AdColumnComponent extends BasicComponent {
 

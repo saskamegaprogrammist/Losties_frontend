@@ -1,38 +1,30 @@
+import Route from "./Route";
+import BasicComponent from "../components/BasicComponent";
+
 class Router {
     private static __instance: Router;
-    constructor() {
+    private _globalParentElement : HTMLElement;
+    private _routes : Array<Route> = new Array<Route>();
+    private _keyWords : Array<string> = new Array<string>();
+    constructor(parent : HTMLElement) {
         if (Router.__instance) {
             return Router.__instance;
         }
         Router.__instance = this;
-
+        this._globalParentElement = parent;
     }
 
-    register(path, view, keyWords) {
-        this._paths[keyWords] = {
-            viewClassName: view.name,
-            viewObject: new view({}, this._application),
-            parent: this._application,
-            pathFunction: path,
-        };
-        keyWords.forEach((keyWord) => {
-            if (!(this._keyWords.includes(keyWord))) {
-                this._keyWords.push(keyWord);
-            }
-        });
+    register(route : Route) {
+        this._routes.push(route);
+        this._keyWords.push(route.keyWord);
     };
 
     return() {
         window.history.back();
     }
 
-    create(pathObject, identities) {
-        let path = "";
-        if (pathObject.pathFunction instanceof Function) {
-            path = pathObject.pathFunction(...identities);
-        } else {
-            path = pathObject.pathFunction;
-        }
+    create(route : Route, identities : Array<RouteArgument>) {
+        let path : string = route.createPath(identities);
         if (window.location.pathname !== path) {
             window.history.pushState(
                 {'id':identities},
@@ -40,38 +32,45 @@ class Router {
                 path,
             );
         };
-        pathObject.viewObject.show(identities);
+        const component : BasicComponent =  new route.componentName({}, this._globalParentElement);
+        component.create(identities);
     }
 
-    go(viewName, ...identities) {
-        for (let path in this._paths) {
-            if (this._paths[path].viewClassName === viewName) {
-                this.create(this._paths[path], identities);
-                break;
+    go(routeName : string, ...identities : Array<RouteArgument>) {
+        for (let route of this._routes) {
+            if (route.check(routeName)) {
+                this.create(route, identities);
+                return;
             }
-            console.log(`couldn\'t open page : ${viewName}`);
-            //console.log(viewName);
-            // console.log(this._paths[path].viewClassName);
         }
+
+        console.log(`couldn\'t open route : ${routeName}`);
     }
 
-    open(keyWords, identities) {
-        const currentPath = this._paths[keyWords];
-        this.create(currentPath, identities);
+    open(keyWords : Array<string>, identities : Array<string>, path : string) {
+        console.log(keyWords, identities);
+        for (let route of this._routes) {
+            if (route.compare(keyWords)) {
+                const component : BasicComponent =  new route.componentName({}, this._globalParentElement);
+                component.create();
+                return;
+            }
+        }
+        console.log(`couldn\'t open page : ${path}`);
     }
 
-    parsePath(path) {
+    parsePath(path : string) {
         const pathSplitted = path.split(/\/|\?=/);
-        const keyWords = [];
-        const args = [];
+        const keyWords : Array<string> = new Array<string>();
+        const args  : Array<string> = new Array<string>();
         pathSplitted.slice(1, pathSplitted.length).forEach((argument) => {
-            if (argument != "") {
+          //  if (argument != "") {  //TODO: check this
                 if (this._keyWords.includes(argument)) {
                     keyWords.push(argument);
                 } else {
                     args.push(argument);
                 }
-            }
+          //  }
         });
         return {
             keyWords : keyWords,
@@ -88,7 +87,7 @@ class Router {
 
         const currentPath = window.location.pathname;
         const pathArgs = this.parsePath(currentPath);
-        this.open(pathArgs.keyWords, pathArgs.args);
+        this.open(pathArgs.keyWords, pathArgs.args, currentPath);
     };
 
 }

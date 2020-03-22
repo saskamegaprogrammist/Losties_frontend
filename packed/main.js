@@ -3849,6 +3849,17 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../.
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js?!./public/components/MainPage/AdColumn/ad-column.scss":
+/*!***************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ref--8-2!./public/components/MainPage/AdColumn/ad-column.scss ***!
+  \***************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".ad-column {\\n  padding-left: 30px; }\\n\\n.ad-column__choose__name {\\n  font-family: var(--global-font-cool);\\n  font-size: 20px;\\n  align-self: flex-end; }\\n\\n.ad-column__choose__name_dark {\\n  color: var(--black-color); }\\n\\n.ad-column__choose__name_light {\\n  color: var(--global-yellow-color); }\\n\\n.ad-column__search {\\n  padding-top: 10px; }\\n\\n.ad-column__image_size {\\n  align-self: center; }\\n\\n@media screen and (min-height: 10px) {\\n  .ad-column__image_size {\\n    width: 25px;\\n    height: 25px; } }\\n\\n@media screen and (min-height: 400px) {\\n  .ad-column__image_size {\\n    width: 30px;\\n    height: 30px; } }\\n\\n@media screen and (min-height: 610px) {\\n  .ad-column__image_size {\\n    width: 35px;\\n    height: 35px; } }\\n\\n@media screen and (min-height: 810px) {\\n  .ad-column__image_size {\\n    width: 40px;\\n    height: 40px; } }\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./public/components/MainPage/AdColumn/ad-column.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ref--8-2");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js?!./public/components/PrimitiveComponent/Header/HeaderElems/header-elems.scss":
 /*!**************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ref--8-2!./public/components/PrimitiveComponent/Header/HeaderElems/header-elems.scss ***!
@@ -3879,17 +3890,6 @@ eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../.
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".header__row {\\n  padding-top: 10px; }\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./public/components/PrimitiveComponent/Header/header.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ref--8-2");
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js?!./public/components/PrimitiveComponent/MainContainer/AdColumn/ad-column.scss":
-/*!***************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ref--8-2!./public/components/PrimitiveComponent/MainContainer/AdColumn/ad-column.scss ***!
-  \***************************************************************************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// Imports\nvar ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\nexports = ___CSS_LOADER_API_IMPORT___(false);\n// Module\nexports.push([module.i, \".ad-column {\\n  padding-left: 30px; }\\n\\n.ad-column__choose__name {\\n  font-family: var(--global-font-cool);\\n  font-size: 20px;\\n  align-self: flex-end; }\\n\\n.ad-column__choose__name_dark {\\n  color: var(--black-color); }\\n\\n.ad-column__choose__name_light {\\n  color: var(--global-yellow-color); }\\n\\n.ad-column__search {\\n  padding-top: 10px; }\\n\", \"\"]);\n// Exports\nmodule.exports = exports;\n\n\n//# sourceURL=webpack:///./public/components/PrimitiveComponent/MainContainer/AdColumn/ad-column.scss?./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ref--8-2");
 
 /***/ }),
 
@@ -3981,7 +3981,87 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar __assign = (undefined && undefined.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nvar BasicComponent = /** @class */ (function () {\n    function BasicComponent(data, parent) {\n        this._data = data;\n        this._parent = parent;\n    }\n    Object.defineProperty(BasicComponent.prototype, \"data\", {\n        get: function () {\n            return this._data;\n        },\n        set: function (dataToSet) {\n            this._data = __assign({}, dataToSet);\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(BasicComponent.prototype, \"parent\", {\n        get: function () {\n            return this._parent;\n        },\n        set: function (parent) {\n            this._parent = parent;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    BasicComponent.prototype.render = function () {\n    };\n    BasicComponent.prototype.renderTo = function (selector) {\n    };\n    return BasicComponent;\n}());\n/* harmony default export */ __webpack_exports__[\"default\"] = (BasicComponent);\n\n\n//# sourceURL=webpack:///./public/components/BasicComponent.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar __assign = (undefined && undefined.__assign) || function () {\n    __assign = Object.assign || function(t) {\n        for (var s, i = 1, n = arguments.length; i < n; i++) {\n            s = arguments[i];\n            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))\n                t[p] = s[p];\n        }\n        return t;\n    };\n    return __assign.apply(this, arguments);\n};\nvar BasicComponent = /** @class */ (function () {\n    function BasicComponent(data, parent) {\n        this._data = data;\n        this._parent = parent;\n    }\n    Object.defineProperty(BasicComponent.prototype, \"data\", {\n        get: function () {\n            return this._data;\n        },\n        set: function (dataToSet) {\n            this._data = __assign({}, dataToSet);\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(BasicComponent.prototype, \"parent\", {\n        get: function () {\n            return this._parent;\n        },\n        set: function (parent) {\n            this._parent = parent;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    BasicComponent.prototype.create = function (identities) {\n        if (identities === void 0) { identities = null; }\n    };\n    BasicComponent.prototype.render = function () {\n    };\n    BasicComponent.prototype.renderTo = function (selector) {\n    };\n    return BasicComponent;\n}());\n/* harmony default export */ __webpack_exports__[\"default\"] = (BasicComponent);\n\n\n//# sourceURL=webpack:///./public/components/BasicComponent.ts?");
+
+/***/ }),
+
+/***/ "./public/components/FormsPage/FormsPageComponent.ts":
+/*!***********************************************************!*\
+  !*** ./public/components/FormsPage/FormsPageComponent.ts ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _BasicComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../BasicComponent */ \"./public/components/BasicComponent.ts\");\n/* harmony import */ var _utils_SelectorString__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/SelectorString */ \"./public/utils/SelectorString.ts\");\n/* harmony import */ var _PrimitiveComponent_PrimitiveComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../PrimitiveComponent/PrimitiveComponent */ \"./public/components/PrimitiveComponent/PrimitiveComponent.ts\");\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\nvar formsPageTemplate = __webpack_require__(/*! ./formsPage.pug */ \"./public/components/FormsPage/formsPage.pug\");\n\n\nvar FormsPageComponent = /** @class */ (function (_super) {\n    __extends(FormsPageComponent, _super);\n    function FormsPageComponent() {\n        var _this = _super !== null && _super.apply(this, arguments) || this;\n        _this._headSelector = new _utils_SelectorString__WEBPACK_IMPORTED_MODULE_1__[\"default\"](\".main-container__row\");\n        return _this;\n    }\n    FormsPageComponent.prototype.create = function (identities) {\n        if (identities === void 0) { identities = null; }\n        var primitiveComponent = new _PrimitiveComponent_PrimitiveComponent__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({}, this.parent);\n        primitiveComponent.render();\n        this.renderTo(this._headSelector);\n    };\n    FormsPageComponent.prototype.render = function () {\n        return \"\" + formsPageTemplate(this.data);\n    };\n    FormsPageComponent.prototype.renderTo = function (selectorString) {\n        this.parent.querySelector(selectorString.selector).innerHTML += this.render();\n    };\n    return FormsPageComponent;\n}(_BasicComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"]));\n/* harmony default export */ __webpack_exports__[\"default\"] = (FormsPageComponent);\n\n\n//# sourceURL=webpack:///./public/components/FormsPage/FormsPageComponent.ts?");
+
+/***/ }),
+
+/***/ "./public/components/FormsPage/formsPage.pug":
+/*!***************************************************!*\
+  !*** ./public/components/FormsPage/formsPage.pug ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var pug = __webpack_require__(/*! ../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;pug_html = pug_html + \"\\u003Cdiv class=\\\"align-self-center col-4\\\"\\u003Easd\\u003C\\u002Fdiv\\u003E\";;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack:///./public/components/FormsPage/formsPage.pug?");
+
+/***/ }),
+
+/***/ "./public/components/MainPage/AdColumn/AdColumnComponent.ts":
+/*!******************************************************************!*\
+  !*** ./public/components/MainPage/AdColumn/AdColumnComponent.ts ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _BasicComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../BasicComponent */ \"./public/components/BasicComponent.ts\");\n/* harmony import */ var _ad_column_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ad-column.scss */ \"./public/components/MainPage/AdColumn/ad-column.scss\");\n/* harmony import */ var _ad_column_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ad_column_scss__WEBPACK_IMPORTED_MODULE_1__);\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\nvar adColumnTemplate = __webpack_require__(/*! ./adColumn.pug */ \"./public/components/MainPage/AdColumn/adColumn.pug\");\n\nvar AdColumnComponent = /** @class */ (function (_super) {\n    __extends(AdColumnComponent, _super);\n    function AdColumnComponent() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    AdColumnComponent.prototype.render = function () {\n        return \"\" + adColumnTemplate(this.data);\n    };\n    AdColumnComponent.prototype.renderTo = function (selectorString) {\n        this.parent.querySelector(selectorString.selector).innerHTML = this.render();\n    };\n    return AdColumnComponent;\n}(_BasicComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"]));\n/* harmony default export */ __webpack_exports__[\"default\"] = (AdColumnComponent);\n\n\n//# sourceURL=webpack:///./public/components/MainPage/AdColumn/AdColumnComponent.ts?");
+
+/***/ }),
+
+/***/ "./public/components/MainPage/AdColumn/ad-column.scss":
+/*!************************************************************!*\
+  !*** ./public/components/MainPage/AdColumn/ad-column.scss ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var api = __webpack_require__(/*! ../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js??ref--8-2!./ad-column.scss */ \"./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js?!./public/components/MainPage/AdColumn/ad-column.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./public/components/MainPage/AdColumn/ad-column.scss?");
+
+/***/ }),
+
+/***/ "./public/components/MainPage/AdColumn/adColumn.pug":
+/*!**********************************************************!*\
+  !*** ./public/components/MainPage/AdColumn/adColumn.pug ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var pug = __webpack_require__(/*! ../../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;pug_html = pug_html + \"\\u003Cdiv class=\\\"row ad-column__choose\\\"\\u003E\\u003Cdiv class=\\\"col-4 ad-column__choose__name ad-column__choose__name_dark\\\"\\u003ELost\\u003C\\u002Fdiv\\u003E\\u003Cdiv class=\\\"col-4 ad-column__choose__name ad-column__choose__name_light\\\"\\u003EFound\\u003C\\u002Fdiv\\u003E\\u003Cdiv class=\\\"col-4\\\"\\u003Esort by\\u003C\\u002Fdiv\\u003E\\u003C\\u002Fdiv\\u003E\\u003Cdiv class=\\\"row ad-column__search\\\"\\u003E\\u003Cdiv class=\\\"input-group\\\"\\u003E\\u003Cdiv class=\\\"input-group-prepend\\\"\\u003E\\u003Cimg class=\\\"img-fluid ad-column__image ad-column__image_size\\\" src=\\\"\\u002Fimages\\u002Floupe.png\\\"\\u003E\\u003C\\u002Fdiv\\u003E\\u003Cinput class=\\\"form-control\\\" placeholder=\\\"search ad\\\"\\u003E\\u003C\\u002Fdiv\\u003E\\u003C\\u002Fdiv\\u003E\\u003Cdiv class=\\\"row ad-column__window\\\"\\u003E\\u003C\\u002Fdiv\\u003E\";;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack:///./public/components/MainPage/AdColumn/adColumn.pug?");
+
+/***/ }),
+
+/***/ "./public/components/MainPage/MainPageComponent.ts":
+/*!*********************************************************!*\
+  !*** ./public/components/MainPage/MainPageComponent.ts ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _BasicComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../BasicComponent */ \"./public/components/BasicComponent.ts\");\n/* harmony import */ var _utils_SelectorString__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/SelectorString */ \"./public/utils/SelectorString.ts\");\n/* harmony import */ var _AdColumn_AdColumnComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./AdColumn/AdColumnComponent */ \"./public/components/MainPage/AdColumn/AdColumnComponent.ts\");\n/* harmony import */ var _PrimitiveComponent_PrimitiveComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../PrimitiveComponent/PrimitiveComponent */ \"./public/components/PrimitiveComponent/PrimitiveComponent.ts\");\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\nvar mainPageTemplate = __webpack_require__(/*! ./mainPage.pug */ \"./public/components/MainPage/mainPage.pug\");\n\n\n\nvar MainPageComponent = /** @class */ (function (_super) {\n    __extends(MainPageComponent, _super);\n    function MainPageComponent() {\n        var _this = _super !== null && _super.apply(this, arguments) || this;\n        _this._headSelector = new _utils_SelectorString__WEBPACK_IMPORTED_MODULE_1__[\"default\"](\".main-container__row\");\n        _this._adColumnSelector = new _utils_SelectorString__WEBPACK_IMPORTED_MODULE_1__[\"default\"](\".ad-column\");\n        return _this;\n    }\n    MainPageComponent.prototype.create = function (identities) {\n        if (identities === void 0) { identities = null; }\n        var primitiveComponent = new _PrimitiveComponent_PrimitiveComponent__WEBPACK_IMPORTED_MODULE_3__[\"default\"]({}, this.parent);\n        primitiveComponent.render();\n        this.renderTo(this._headSelector);\n    };\n    MainPageComponent.prototype.render = function () {\n        return \"\" + mainPageTemplate(this.data);\n    };\n    MainPageComponent.prototype.renderAdsColumn = function () {\n        var adColumnComponent = new _AdColumn_AdColumnComponent__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({}, this.parent.querySelector(this._headSelector.selector));\n        adColumnComponent.renderTo(this._adColumnSelector);\n    };\n    MainPageComponent.prototype.renderTo = function (selectorString) {\n        this.parent.querySelector(selectorString.selector).innerHTML += this.render();\n        this.renderAdsColumn();\n    };\n    return MainPageComponent;\n}(_BasicComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"]));\n/* harmony default export */ __webpack_exports__[\"default\"] = (MainPageComponent);\n\n\n//# sourceURL=webpack:///./public/components/MainPage/MainPageComponent.ts?");
+
+/***/ }),
+
+/***/ "./public/components/MainPage/mainPage.pug":
+/*!*************************************************!*\
+  !*** ./public/components/MainPage/mainPage.pug ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var pug = __webpack_require__(/*! ../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;pug_html = pug_html + \"\\u003Cdiv class=\\\"container-fluid col-10 ad-column\\\"\\u003E\\u003C\\u002Fdiv\\u003E\\u003Cdiv class=\\\"container-fluid col-2\\\"\\u003E\\u003C\\u002Fdiv\\u003E\";;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack:///./public/components/MainPage/mainPage.pug?");
 
 /***/ }),
 
@@ -4087,40 +4167,6 @@ eval("var api = __webpack_require__(/*! ../../../../node_modules/style-loader/di
 
 /***/ }),
 
-/***/ "./public/components/PrimitiveComponent/MainContainer/AdColumn/AdColumnComponent.ts":
-/*!******************************************************************************************!*\
-  !*** ./public/components/PrimitiveComponent/MainContainer/AdColumn/AdColumnComponent.ts ***!
-  \******************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _BasicComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../BasicComponent */ \"./public/components/BasicComponent.ts\");\n/* harmony import */ var _ad_column_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ad-column.scss */ \"./public/components/PrimitiveComponent/MainContainer/AdColumn/ad-column.scss\");\n/* harmony import */ var _ad_column_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_ad_column_scss__WEBPACK_IMPORTED_MODULE_1__);\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\nvar adColumnTemplate = __webpack_require__(/*! ./adColumn.pug */ \"./public/components/PrimitiveComponent/MainContainer/AdColumn/adColumn.pug\");\n\nvar AdColumnComponent = /** @class */ (function (_super) {\n    __extends(AdColumnComponent, _super);\n    function AdColumnComponent() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    AdColumnComponent.prototype.render = function () {\n        return \"\" + adColumnTemplate(this.data);\n    };\n    AdColumnComponent.prototype.renderTo = function (selectorString) {\n        this.parent.querySelector(selectorString.selector).innerHTML = this.render();\n    };\n    return AdColumnComponent;\n}(_BasicComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"]));\n/* harmony default export */ __webpack_exports__[\"default\"] = (AdColumnComponent);\n\n\n//# sourceURL=webpack:///./public/components/PrimitiveComponent/MainContainer/AdColumn/AdColumnComponent.ts?");
-
-/***/ }),
-
-/***/ "./public/components/PrimitiveComponent/MainContainer/AdColumn/ad-column.scss":
-/*!************************************************************************************!*\
-  !*** ./public/components/PrimitiveComponent/MainContainer/AdColumn/ad-column.scss ***!
-  \************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var api = __webpack_require__(/*! ../../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../../../node_modules/css-loader/dist/cjs.js!../../../../../node_modules/sass-loader/dist/cjs.js??ref--8-2!./ad-column.scss */ \"./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js?!./public/components/PrimitiveComponent/MainContainer/AdColumn/ad-column.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./public/components/PrimitiveComponent/MainContainer/AdColumn/ad-column.scss?");
-
-/***/ }),
-
-/***/ "./public/components/PrimitiveComponent/MainContainer/AdColumn/adColumn.pug":
-/*!**********************************************************************************!*\
-  !*** ./public/components/PrimitiveComponent/MainContainer/AdColumn/adColumn.pug ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var pug = __webpack_require__(/*! ../../../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;pug_html = pug_html + \"\\u003Cdiv class=\\\"row ad-column__choose\\\"\\u003E\\u003Cdiv class=\\\"col-4 ad-column__choose__name ad-column__choose__name_dark\\\"\\u003ELost\\u003C\\u002Fdiv\\u003E\\u003Cdiv class=\\\"col-4 ad-column__choose__name ad-column__choose__name_light\\\"\\u003EFound\\u003C\\u002Fdiv\\u003E\\u003Cdiv class=\\\"col-4\\\"\\u003Esort by\\u003C\\u002Fdiv\\u003E\\u003C\\u002Fdiv\\u003E\\u003Cdiv class=\\\"row ad-column__search\\\"\\u003E\\u003C!--img.img-thumbnail(src='\\u002Fimages\\u002Floupe.png')--\\u003E\\u003Cinput class=\\\"form-control\\\" placeholder=\\\"search ad\\\"\\u003E\\u003C\\u002Fdiv\\u003E\\u003Cdiv class=\\\"row ad-column__window\\\"\\u003E\\u003C\\u002Fdiv\\u003E\";;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack:///./public/components/PrimitiveComponent/MainContainer/AdColumn/adColumn.pug?");
-
-/***/ }),
-
 /***/ "./public/components/PrimitiveComponent/MainContainer/MainContainerComponent.ts":
 /*!**************************************************************************************!*\
   !*** ./public/components/PrimitiveComponent/MainContainer/MainContainerComponent.ts ***!
@@ -4129,18 +4175,7 @@ eval("var pug = __webpack_require__(/*! ../../../../../node_modules/pug-runtime/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _BasicComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../BasicComponent */ \"./public/components/BasicComponent.ts\");\n/* harmony import */ var _utils_SelectorString__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../utils/SelectorString */ \"./public/utils/SelectorString.ts\");\n/* harmony import */ var _main_container_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main-container.scss */ \"./public/components/PrimitiveComponent/MainContainer/main-container.scss\");\n/* harmony import */ var _main_container_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_container_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _AdColumn_AdColumnComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AdColumn/AdColumnComponent */ \"./public/components/PrimitiveComponent/MainContainer/AdColumn/AdColumnComponent.ts\");\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\nvar containerTemplate = __webpack_require__(/*! ./main-container.pug */ \"./public/components/PrimitiveComponent/MainContainer/main-container.pug\");\n\n\n\nvar MainContainerComponent = /** @class */ (function (_super) {\n    __extends(MainContainerComponent, _super);\n    function MainContainerComponent() {\n        var _this = _super !== null && _super.apply(this, arguments) || this;\n        _this._headSelector = new _utils_SelectorString__WEBPACK_IMPORTED_MODULE_1__[\"default\"](\".main-container\");\n        _this._adColumnSelector = new _utils_SelectorString__WEBPACK_IMPORTED_MODULE_1__[\"default\"](\".ad-column\");\n        return _this;\n    }\n    MainContainerComponent.prototype.render = function () {\n        return \"\" + containerTemplate(this.data);\n    };\n    MainContainerComponent.prototype.renderAdsColumn = function () {\n        var adColumnComponent = new _AdColumn_AdColumnComponent__WEBPACK_IMPORTED_MODULE_3__[\"default\"]({}, this.parent.querySelector(this._headSelector.selector));\n        adColumnComponent.renderTo(this._adColumnSelector);\n    };\n    MainContainerComponent.prototype.renderTo = function (selectorString) {\n        this.parent.querySelector(selectorString.selector).innerHTML += this.render();\n        this.renderAdsColumn();\n    };\n    return MainContainerComponent;\n}(_BasicComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"]));\n/* harmony default export */ __webpack_exports__[\"default\"] = (MainContainerComponent);\n\n\n//# sourceURL=webpack:///./public/components/PrimitiveComponent/MainContainer/MainContainerComponent.ts?");
-
-/***/ }),
-
-/***/ "./public/components/PrimitiveComponent/MainContainer/main-container.pug":
-/*!*******************************************************************************!*\
-  !*** ./public/components/PrimitiveComponent/MainContainer/main-container.pug ***!
-  \*******************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("var pug = __webpack_require__(/*! ../../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;pug_html = pug_html + \"\\u003Cdiv class=\\\"container-fluid main-container\\\"\\u003E\\u003Cdiv class=\\\"row main-container__row\\\"\\u003E\\u003Cdiv class=\\\"container-fluid col-10 ad-column\\\"\\u003E\\u003C\\u002Fdiv\\u003E\\u003Cdiv class=\\\"container-fluid col-2\\\"\\u003E\\u003C\\u002Fdiv\\u003E\\u003C\\u002Fdiv\\u003E\\u003C\\u002Fdiv\\u003E\";;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack:///./public/components/PrimitiveComponent/MainContainer/main-container.pug?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _BasicComponent__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../BasicComponent */ \"./public/components/BasicComponent.ts\");\n/* harmony import */ var _utils_SelectorString__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../utils/SelectorString */ \"./public/utils/SelectorString.ts\");\n/* harmony import */ var _main_container_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./main-container.scss */ \"./public/components/PrimitiveComponent/MainContainer/main-container.scss\");\n/* harmony import */ var _main_container_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_main_container_scss__WEBPACK_IMPORTED_MODULE_2__);\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\nvar containerTemplate = __webpack_require__(/*! ./mainContainer.pug */ \"./public/components/PrimitiveComponent/MainContainer/mainContainer.pug\");\n\n\nvar MainContainerComponent = /** @class */ (function (_super) {\n    __extends(MainContainerComponent, _super);\n    function MainContainerComponent() {\n        var _this = _super !== null && _super.apply(this, arguments) || this;\n        _this._headSelector = new _utils_SelectorString__WEBPACK_IMPORTED_MODULE_1__[\"default\"](\".main-container\");\n        return _this;\n    }\n    MainContainerComponent.prototype.render = function () {\n        return \"\" + containerTemplate(this.data);\n    };\n    MainContainerComponent.prototype.renderTo = function (selectorString) {\n        this.parent.querySelector(selectorString.selector).innerHTML += this.render();\n    };\n    return MainContainerComponent;\n}(_BasicComponent__WEBPACK_IMPORTED_MODULE_0__[\"default\"]));\n/* harmony default export */ __webpack_exports__[\"default\"] = (MainContainerComponent);\n\n\n//# sourceURL=webpack:///./public/components/PrimitiveComponent/MainContainer/MainContainerComponent.ts?");
 
 /***/ }),
 
@@ -4152,6 +4187,17 @@ eval("var pug = __webpack_require__(/*! ../../../../node_modules/pug-runtime/ind
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("var api = __webpack_require__(/*! ../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../../node_modules/css-loader/dist/cjs.js!../../../../node_modules/sass-loader/dist/cjs.js??ref--8-2!./main-container.scss */ \"./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js?!./public/components/PrimitiveComponent/MainContainer/main-container.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\nvar exported = content.locals ? content.locals : {};\n\n\n\nmodule.exports = exported;\n\n//# sourceURL=webpack:///./public/components/PrimitiveComponent/MainContainer/main-container.scss?");
+
+/***/ }),
+
+/***/ "./public/components/PrimitiveComponent/MainContainer/mainContainer.pug":
+/*!******************************************************************************!*\
+  !*** ./public/components/PrimitiveComponent/MainContainer/mainContainer.pug ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var pug = __webpack_require__(/*! ../../../../node_modules/pug-runtime/index.js */ \"./node_modules/pug-runtime/index.js\");\n\nfunction template(locals) {var pug_html = \"\", pug_mixins = {}, pug_interp;pug_html = pug_html + \"\\u003Cdiv class=\\\"container-fluid main-container\\\"\\u003E\\u003Cdiv class=\\\"row main-container__row\\\"\\u003E\\u003C\\u002Fdiv\\u003E\\u003C\\u002Fdiv\\u003E\";;return pug_html;};\nmodule.exports = template;\n\n//# sourceURL=webpack:///./public/components/PrimitiveComponent/MainContainer/mainContainer.pug?");
 
 /***/ }),
 
@@ -4193,11 +4239,35 @@ eval("var api = __webpack_require__(/*! ../../node_modules/style-loader/dist/run
 /*!************************!*\
   !*** ./public/main.ts ***!
   \************************/
-/*! no exports provided */
+/*! exports provided: router */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/main.scss */ \"./public/components/main.scss\");\n/* harmony import */ var _components_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_main_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _components_PrimitiveComponent_PrimitiveComponent__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/PrimitiveComponent/PrimitiveComponent */ \"./public/components/PrimitiveComponent/PrimitiveComponent.ts\");\n\n\n\nvar application = document.getElementById('application');\nvar BasicComponent = new _components_PrimitiveComponent_PrimitiveComponent__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({}, application);\nBasicComponent.render();\n\n\n//# sourceURL=webpack:///./public/main.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"router\", function() { return router; });\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ \"./node_modules/bootstrap/dist/css/bootstrap.min.css\");\n/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_main_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/main.scss */ \"./public/components/main.scss\");\n/* harmony import */ var _components_main_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_main_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _utils_Router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils/Router */ \"./public/utils/Router.ts\");\n/* harmony import */ var _utils_Route__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./utils/Route */ \"./public/utils/Route.ts\");\n/* harmony import */ var _components_MainPage_MainPageComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/MainPage/MainPageComponent */ \"./public/components/MainPage/MainPageComponent.ts\");\n/* harmony import */ var _components_FormsPage_FormsPageComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/FormsPage/FormsPageComponent */ \"./public/components/FormsPage/FormsPageComponent.ts\");\n\n\n\n\n\n\nvar application = document.getElementById('application');\nvar router = new _utils_Router__WEBPACK_IMPORTED_MODULE_2__[\"default\"](application);\nrouter.register(new _utils_Route__WEBPACK_IMPORTED_MODULE_3__[\"default\"](null, \"main-page\", \"\", _components_MainPage_MainPageComponent__WEBPACK_IMPORTED_MODULE_4__[\"default\"]));\nrouter.register(new _utils_Route__WEBPACK_IMPORTED_MODULE_3__[\"default\"](null, \"signup\", \"\", _components_FormsPage_FormsPageComponent__WEBPACK_IMPORTED_MODULE_5__[\"default\"]));\nrouter.start();\n\n\n\n//# sourceURL=webpack:///./public/main.ts?");
+
+/***/ }),
+
+/***/ "./public/utils/Route.ts":
+/*!*******************************!*\
+  !*** ./public/utils/Route.ts ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar Route = /** @class */ (function () {\n    function Route(parentRoute, name, keyword, component) {\n        if (parentRoute === void 0) { parentRoute = null; }\n        if (name === void 0) { name = null; }\n        this._parentRoute = parentRoute;\n        this._name = name;\n        this._keyWord = keyword;\n        this._componentName = component;\n    }\n    Route.prototype.createPath = function (args) {\n        if (args === void 0) { args = null; }\n        var argument = args.pop();\n        if (this._parentRoute === null) {\n            return \"/\" + this._keyWord + argument.getPath();\n        }\n        else {\n            return this._parentRoute.createPath(args) + \"/\" + this._keyWord + argument.getPath();\n        }\n    };\n    Route.prototype.compare = function (keywords) {\n        var keyWord = keywords.pop();\n        if (keyWord !== this._keyWord)\n            return false;\n        if (this._parentRoute === null) {\n            return true;\n        }\n        else {\n            return this._parentRoute.compare(keywords);\n        }\n    };\n    Route.prototype.check = function (routeName) {\n        return (this._name === routeName);\n    };\n    Object.defineProperty(Route.prototype, \"componentName\", {\n        get: function () {\n            return this._componentName;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    Object.defineProperty(Route.prototype, \"keyWord\", {\n        get: function () {\n            return this._keyWord;\n        },\n        enumerable: true,\n        configurable: true\n    });\n    return Route;\n}());\n/* harmony default export */ __webpack_exports__[\"default\"] = (Route);\n\n\n//# sourceURL=webpack:///./public/utils/Route.ts?");
+
+/***/ }),
+
+/***/ "./public/utils/Router.ts":
+/*!********************************!*\
+  !*** ./public/utils/Router.ts ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar Router = /** @class */ (function () {\n    function Router(parent) {\n        this._routes = new Array();\n        this._keyWords = new Array();\n        if (Router.__instance) {\n            return Router.__instance;\n        }\n        Router.__instance = this;\n        this._globalParentElement = parent;\n    }\n    Router.prototype.register = function (route) {\n        this._routes.push(route);\n        this._keyWords.push(route.keyWord);\n    };\n    ;\n    Router.prototype.return = function () {\n        window.history.back();\n    };\n    Router.prototype.create = function (route, identities) {\n        var path = route.createPath(identities);\n        if (window.location.pathname !== path) {\n            window.history.pushState({ 'id': identities }, '', path);\n        }\n        ;\n        var component = new route.componentName({}, this._globalParentElement);\n        component.create(identities);\n    };\n    Router.prototype.go = function (routeName) {\n        var identities = [];\n        for (var _i = 1; _i < arguments.length; _i++) {\n            identities[_i - 1] = arguments[_i];\n        }\n        for (var _a = 0, _b = this._routes; _a < _b.length; _a++) {\n            var route = _b[_a];\n            if (route.check(routeName)) {\n                this.create(route, identities);\n                return;\n            }\n        }\n        console.log(\"couldn't open route : \" + routeName);\n    };\n    Router.prototype.open = function (keyWords, identities, path) {\n        console.log(keyWords, identities);\n        for (var _i = 0, _a = this._routes; _i < _a.length; _i++) {\n            var route = _a[_i];\n            if (route.compare(keyWords)) {\n                var component = new route.componentName({}, this._globalParentElement);\n                component.create();\n                return;\n            }\n        }\n        console.log(\"couldn't open page : \" + path);\n    };\n    Router.prototype.parsePath = function (path) {\n        var _this = this;\n        var pathSplitted = path.split(/\\/|\\?=/);\n        var keyWords = new Array();\n        var args = new Array();\n        pathSplitted.slice(1, pathSplitted.length).forEach(function (argument) {\n            //  if (argument != \"\") {  //TODO: check this\n            if (_this._keyWords.includes(argument)) {\n                keyWords.push(argument);\n            }\n            else {\n                args.push(argument);\n            }\n            //  }\n        });\n        return {\n            keyWords: keyWords,\n            args: args,\n        };\n    };\n    Router.prototype.start = function () {\n        window.onpopstate = function () {\n            var currentPath = window.location.pathname;\n            var pathArgs = this.parsePath(currentPath);\n            this.open(pathArgs.keyWords, pathArgs.args);\n        }.bind(this);\n        var currentPath = window.location.pathname;\n        var pathArgs = this.parsePath(currentPath);\n        this.open(pathArgs.keyWords, pathArgs.args, currentPath);\n    };\n    ;\n    return Router;\n}());\n/* harmony default export */ __webpack_exports__[\"default\"] = (Router);\n\n\n//# sourceURL=webpack:///./public/utils/Router.ts?");
 
 /***/ }),
 
