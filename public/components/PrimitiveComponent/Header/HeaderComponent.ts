@@ -21,7 +21,7 @@ class HeaderComponent extends BasicComponent {
     }
 
     renderHeaderElems() {
-        const headerElemsComponent = new HeaderElemsComponent({}, this.parent.querySelector(this._headSelector.selector));
+        const headerElemsComponent = new HeaderElemsComponent(this.data, this.parent.querySelector(this._headSelector.selector));
         headerElemsComponent.renderTo(this._headerElemsBlockSelector);
     }
 

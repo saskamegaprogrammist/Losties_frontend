@@ -1,0 +1,20 @@
+.forms-page__name {
+  font-family: var(--global-font-cool);
+  color: var(--global-green-color);
+  font-size: 48px;
+  align-self: flex-end;
+}
+
+.forms-page__input{
+  border: solid 1px var(--global-green-color);
+}
+
+.forms-page__input::placeholder {
+  font-family: var(--global-font-main);
+}
+
+.forms-page__button {
+  font-family: var(--global-font-main);
+  background-color: var(--global-green-color);
+  color: var(--global-yellow-color);
+}

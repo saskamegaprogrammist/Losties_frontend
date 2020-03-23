@@ -1,4 +1,6 @@
-div.row
-    div.col-3.header-elems__name LOSTIES
-    div.col-1.header-elems__ref sign up
-    div.col-1.header-elems__ref login
+div.row.d-flex.justify-content-start
+    div.pl-lg-4.header-elems__name LOSTIES
+    if formType === 'login'
+        div.pl-4.pb-3.align-self-end.header-elems__ref sign up
+    if formType === 'signup'
+        div.pl-4.pb-3.align-self-end.header-elems__ref login

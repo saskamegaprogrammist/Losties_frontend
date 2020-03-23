@@ -10,11 +10,11 @@ class PrimitiveComponent extends BasicComponent {
 
 	render() {
 		const baseBlock = document.createElement('div');
-		baseBlock.className = 'primitive';
+		baseBlock.className = 'primitive primitive_size';
 		this.parent.appendChild(baseBlock);
-		const headerComponent = new HeaderComponent({}, this.parent);
+		const headerComponent = new HeaderComponent(this.data, this.parent);
 		headerComponent.renderTo(this._headSelector);
-		const containerComponent = new MainContainerComponent({}, this.parent);
+		const containerComponent = new MainContainerComponent(this.data, this.parent);
 		containerComponent.renderTo(this._headSelector);
 	}
 }

@@ -3,5 +3,9 @@
 
 
 .user-info__image {
-  border-radius: 50%;
+}
+
+.user-info__row__text {
+  font-family: var(--global-font-main);
+  font-size: 18px;
 }

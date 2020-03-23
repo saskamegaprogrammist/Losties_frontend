@@ -6,7 +6,7 @@ import PrimitiveComponent from "../PrimitiveComponent/PrimitiveComponent";
 
 class MainPageComponent extends BasicComponent {
 
-    private _headSelector : SelectorString =  new SelectorString(".main-container__row");
+    private _headSelector : SelectorString =  new SelectorString(".main-container");
     private _adColumnSelector : SelectorString =  new SelectorString(".ad-column");
 
     create(identities: Array<string> = null) {
