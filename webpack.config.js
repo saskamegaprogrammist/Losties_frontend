@@ -37,16 +37,13 @@ module.exports = {
 					}
 				}
 			},
+			{ test: /\.tsx?$/,
+				loader: "ts-loader" },
 			{
-				test: /\.(js)$/,
-				exclude: [/node_modules/, /worker/],
-				use: ["eslint-loader"],
-
-			},
-			{
-				test: /\.tsx?$/,
-				use: 'ts-loader',
+				test: /\.ts$/,
 				exclude: /node_modules/,
+				loader: 'eslint-loader',
+
 			},
 			{
 				test: /\.pug$/,

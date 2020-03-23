@@ -9,7 +9,7 @@ class HeaderElemsComponent extends BasicComponent {
         return `${headerElemsTemplate(this.data)}`;
     }
 
-    renderTo(selectorString:SelectorString) {
+    renderTo(selectorString: SelectorString) {
         this.parent.querySelector(selectorString.selector).innerHTML = this.render();
     }
 }

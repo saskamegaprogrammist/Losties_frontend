@@ -6,9 +6,9 @@ class Route {
     private _name: string;
     private _keyWord: string;
     private _level: number;
-    private _componentName : any;
+    private _componentName: any;
 
-    constructor(parentRoute: Route = null, name: string = null, keyword: string, component : any) {
+    constructor(parentRoute: Route = null, name: string = null, keyword: string, component: any) {
         this._parentRoute = parentRoute;
         this._name = name;
         this._keyWord = keyword;
@@ -24,7 +24,7 @@ class Route {
         }
     }
 
-    compare(keywords : Array<string>) : boolean{
+    compare(keywords: Array<string>): boolean{
         const keyWord: string = keywords.pop();
         if (keyWord !== this._keyWord) return false;
         if (this._parentRoute === null) {
@@ -34,7 +34,7 @@ class Route {
         }
     }
 
-    check (routeName : string) {
+    check (routeName: string) {
         return (this._name === routeName);
     }
 

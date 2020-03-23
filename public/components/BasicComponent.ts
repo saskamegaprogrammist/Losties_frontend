@@ -2,10 +2,10 @@ import SelectorString from "../utils/SelectorString";
 import EditableObject from "../utils/EditableObject";
 
 class BasicComponent {
-	private _data : EditableObject;
-	private _parent : HTMLElement;
+	private _data: EditableObject;
+	private _parent: HTMLElement;
 
-	constructor(data:EditableObject, parent:HTMLElement) {
+	constructor(data: EditableObject, parent: HTMLElement) {
 		this._data = data;
 		this._parent = parent;
 
@@ -14,7 +14,7 @@ class BasicComponent {
 		return this._data;
 	}
 
-	set data(dataToSet:EditableObject) {
+	set data(dataToSet: EditableObject) {
 		this._data = {...dataToSet};
 	}
 
@@ -22,18 +22,18 @@ class BasicComponent {
 		return this._parent;
 	}
 
-	set parent(parent:HTMLElement) {
+	set parent(parent: HTMLElement) {
 		this._parent = parent;
 	}
 
-	create(identities : Array<string> = null, type : string = null) {
+	create(identities: Array<string> = null, type: string = null) {
 
 	}
 
 	render() {
 	}
 
-	renderTo(selector:SelectorString) {
+	renderTo(selector: SelectorString) {
 
 	}
 }

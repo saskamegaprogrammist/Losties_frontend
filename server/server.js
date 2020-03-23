@@ -5,8 +5,8 @@ const path = require('path');
 const fallback = require('express-history-api-fallback');
 const app = express();
 
-var root = path.resolve(__dirname, '..', 'packed');
-var rootImg = path.resolve(__dirname, '..', 'public');
+const root = path.resolve(__dirname, '..', 'packed');
+const rootImg = path.resolve(__dirname, '..', 'public');
 app.use(express.static(root));
 app.use(express.static(rootImg));
 app.use(fallback('index.html', { root: root }));

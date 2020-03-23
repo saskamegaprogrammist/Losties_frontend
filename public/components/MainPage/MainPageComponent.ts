@@ -6,11 +6,11 @@ import PrimitiveComponent from "../PrimitiveComponent/PrimitiveComponent";
 
 class MainPageComponent extends BasicComponent {
 
-    private _headSelector : SelectorString =  new SelectorString(".main-container");
-    private _adColumnSelector : SelectorString =  new SelectorString(".ad-column");
+    private _headSelector: SelectorString =  new SelectorString(".main-container");
+    private _adColumnSelector: SelectorString =  new SelectorString(".ad-column");
 
     create(identities: Array<string> = null) {
-        const primitiveComponent : PrimitiveComponent = new PrimitiveComponent({}, this.parent);
+        const primitiveComponent: PrimitiveComponent = new PrimitiveComponent({}, this.parent);
         primitiveComponent.render();
         this.renderTo(this._headSelector);
     }
@@ -25,7 +25,7 @@ class MainPageComponent extends BasicComponent {
     }
 
 
-    renderTo(selectorString:SelectorString) {
+    renderTo(selectorString: SelectorString) {
         this.parent.querySelector(selectorString.selector).innerHTML += this.render();
         this.renderAdsColumn();
     }

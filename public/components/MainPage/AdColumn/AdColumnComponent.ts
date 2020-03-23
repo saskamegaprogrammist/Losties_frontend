@@ -9,7 +9,7 @@ class AdColumnComponent extends BasicComponent {
         return `${adColumnTemplate(this.data)}`;
     }
 
-    renderTo(selectorString:SelectorString) {
+    renderTo(selectorString: SelectorString) {
         this.parent.querySelector(selectorString.selector).innerHTML = this.render();
     }
 }

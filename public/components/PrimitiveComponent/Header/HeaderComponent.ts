@@ -7,9 +7,9 @@ import HeaderElemsComponent from "./HeaderElems/HeaderElemsComponent";
 
 class HeaderComponent extends BasicComponent {
 
-    private _headSelector : SelectorString =  new SelectorString(".header");
-    private _userInfoBlockSelector : SelectorString =  new SelectorString(".user-info");
-    private _headerElemsBlockSelector : SelectorString =  new SelectorString(".header-elems");
+    private _headSelector: SelectorString =  new SelectorString(".header");
+    private _userInfoBlockSelector: SelectorString =  new SelectorString(".user-info");
+    private _headerElemsBlockSelector: SelectorString =  new SelectorString(".header-elems");
 
     render() {
     	return `${headerTemplate(this.data)}`;
@@ -25,7 +25,7 @@ class HeaderComponent extends BasicComponent {
         headerElemsComponent.renderTo(this._headerElemsBlockSelector);
     }
 
-    renderTo(selectorString:SelectorString) {
+    renderTo(selectorString: SelectorString) {
     	this.parent.querySelector(selectorString.selector).innerHTML = this.render();
     	this.renderUserInfo();
         this.renderHeaderElems();

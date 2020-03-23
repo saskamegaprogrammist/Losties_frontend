@@ -6,7 +6,7 @@ import MainContainerComponent from "./MainContainer/MainContainerComponent";
 
 class PrimitiveComponent extends BasicComponent {
 
-	private _headSelector : SelectorString =  new SelectorString(".primitive");
+	private _headSelector: SelectorString =  new SelectorString(".primitive");
 
 	render() {
 		const baseBlock = document.createElement('div');

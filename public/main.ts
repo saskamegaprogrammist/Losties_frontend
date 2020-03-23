@@ -12,5 +12,4 @@ router.register(new Route(null, "main-page", "", MainPageComponent));
 router.register(new Route(null, "signup", "signup", FormsPageComponent));
 router.register(new Route(null, "login", "login", FormsPageComponent));
 router.start();
-
 export {router};

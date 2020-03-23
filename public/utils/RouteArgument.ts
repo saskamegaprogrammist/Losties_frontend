@@ -2,14 +2,14 @@ enum ArgTypes {
     undefined,
     id,
     search
-};
+}
 
-const emptyArg : string = "";
+const emptyArg = "";
 
 class RouteArgument {
-    private _argument : string;
+    private _argument: string;
     private _type: number;
-    constructor(argument : string = null, type : keyof typeof ArgTypes) {
+    constructor(argument: string = null, type: keyof typeof ArgTypes) {
         if (argument === null || argument === undefined) {
             this._argument = emptyArg;
             this._type = ArgTypes["undefined"];

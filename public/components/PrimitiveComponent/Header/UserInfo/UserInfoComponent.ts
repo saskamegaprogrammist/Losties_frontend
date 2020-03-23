@@ -9,7 +9,7 @@ class UserInfoComponent extends BasicComponent {
 		return `${userInfoTemplate(this.data)}`;
 	}
 
-	renderTo(selectorString:SelectorString) {
+	renderTo(selectorString: SelectorString) {
 		this.parent.querySelector(selectorString.selector).innerHTML = this.render();
 	}
 }
