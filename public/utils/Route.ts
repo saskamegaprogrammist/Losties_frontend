@@ -1,11 +1,9 @@
-import {strict} from "assert";
-import {RouteArgument} from "./RouteArgument";
+import {emptyArg, RouteArgument} from "./RouteArgument";
 
 class Route {
     private _parentRoute: Route;
     private _name: string;
     private _keyWord: string;
-    private _level: number;
     private _componentName: any;
 
     constructor(parentRoute: Route = null, name: string = null, keyword: string, component: any) {
@@ -16,7 +14,10 @@ class Route {
     }
 
     createPath(args: Array<RouteArgument> = null): string {
-        const argument: RouteArgument = args.pop();
+        let argument: RouteArgument = new RouteArgument(emptyArg, "undefined");
+        if (args.length !== 0) {
+            argument = args.pop();
+        }
         if (this._parentRoute === null) {
             return `/${this._keyWord}${argument.getPath()}`;
         } else {
@@ -24,7 +25,7 @@ class Route {
         }
     }
 
-    compare(keywords: Array<string>): boolean{
+    compare(keywords: Array<string>): boolean {
         const keyWord: string = keywords.pop();
         if (keyWord !== this._keyWord) return false;
         if (this._parentRoute === null) {
@@ -34,7 +35,7 @@ class Route {
         }
     }
 
-    check (routeName: string) {
+    check (routeName: string): boolean {
         return (this._name === routeName);
     }
 
@@ -42,7 +43,7 @@ class Route {
         return this._componentName;
     }
 
-    get keyWord() {
+    get keyWord(): string {
         return this._keyWord;
     }
 }

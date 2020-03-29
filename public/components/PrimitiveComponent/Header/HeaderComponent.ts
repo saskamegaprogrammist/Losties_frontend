@@ -11,18 +11,25 @@ class HeaderComponent extends BasicComponent {
     private _userInfoBlockSelector: SelectorString =  new SelectorString(".user-info");
     private _headerElemsBlockSelector: SelectorString =  new SelectorString(".header-elems");
 
+    private _headerElemsComponent: HeaderElemsComponent;
+    private _userInfoComponent: UserInfoComponent;
+
+    createHandlers(){
+        this._headerElemsComponent.createHandlers();
+    }
+
     render() {
     	return `${headerTemplate(this.data)}`;
     }
 
     renderUserInfo() {
-    	const userInfoComponent = new UserInfoComponent({}, this.parent.querySelector(this._headSelector.selector));
-    	userInfoComponent.renderTo(this._userInfoBlockSelector);
+    	this._userInfoComponent = new UserInfoComponent({}, this.parent.querySelector(this._headSelector.selector));
+        this._userInfoComponent.renderTo(this._userInfoBlockSelector);
     }
 
     renderHeaderElems() {
-        const headerElemsComponent = new HeaderElemsComponent(this.data, this.parent.querySelector(this._headSelector.selector));
-        headerElemsComponent.renderTo(this._headerElemsBlockSelector);
+        this._headerElemsComponent = new HeaderElemsComponent(this.data, this.parent.querySelector(this._headSelector.selector));
+        this._headerElemsComponent.renderTo(this._headerElemsBlockSelector);
     }
 
     renderTo(selectorString: SelectorString) {

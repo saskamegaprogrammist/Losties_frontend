@@ -45,7 +45,7 @@ class Router {
             );
         }
         const component: BasicComponent =  new route.componentName({}, this._globalParentElement);
-        component.create(this.getStringArguments(identities));
+        component.create(this.getStringArguments(identities), route.keyWord);
     }
 
     go(routeName: string, ...identities: Array<RouteArgument>) {

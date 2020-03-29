@@ -1,0 +1,55 @@
+.main-page__banner-container_size {
+  @media screen and (min-height: 10px) {
+    height: 100px;
+  }
+
+  @media screen and (min-height: 400px) {
+    height: 150px;
+  }
+
+  @media screen and (min-height: 610px) {
+    height: 200px;
+  }
+
+  @media screen and (min-height: 810px) {
+    height: 250px;
+  }
+}
+
+.main-page__banner_size {
+  width: 100%;
+  @media screen and (min-height: 10px) {
+    height: 100px;
+  }
+
+  @media screen and (min-height: 400px) {
+    height: 150px;
+  }
+
+  @media screen and (min-height: 610px) {
+    height: 200px;
+  }
+
+  @media screen and (min-height: 810px) {
+    height: 250px;
+  }
+}
+
+
+.main-page__container_size {
+  @media screen and (min-height: 10px) {
+    height: 220px;
+  }
+
+  @media screen and (min-height: 400px) {
+    height: 380px;
+  }
+
+  @media screen and (min-height: 610px) {
+    height: 510px;
+  }
+
+  @media screen and (min-height: 810px) {
+    height: 595px;
+  }
+}

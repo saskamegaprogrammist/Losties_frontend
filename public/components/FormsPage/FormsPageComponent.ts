@@ -8,11 +8,23 @@ class FormsPageComponent extends BasicComponent {
 
     private _headSelector: SelectorString =  new SelectorString(".main-container");
 
+    private _primitiveComponent: PrimitiveComponent = null;
+
+    createHandlers() {
+        this._primitiveComponent.createHandlers();
+    }
+
     create(identities: Array<string> = null, type: string = null) {
         this.data.formType = type;
-        const primitiveComponent: PrimitiveComponent = new PrimitiveComponent(this.data, this.parent);
-        primitiveComponent.render();
+        if (this._primitiveComponent === null) {
+            this._primitiveComponent = new PrimitiveComponent(this.data, this.parent);
+            this._primitiveComponent.render();
+        } else {
+            console.log('geg');
+            this._primitiveComponent.rerender(this.data);
+        }
         this.renderTo(this._headSelector);
+        this.createHandlers();
     }
 
     render() {
@@ -20,7 +32,7 @@ class FormsPageComponent extends BasicComponent {
     }
 
     renderTo(selectorString: SelectorString) {
-        this.parent.querySelector(selectorString.selector).innerHTML += this.render();
+        this.parent.querySelector(selectorString.selector).innerHTML = this.render();
     }
 }
 

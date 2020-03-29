@@ -2,7 +2,12 @@
 
 }
 
+.ad-column__choose {
+  padding: 10px 0 0 0;
+}
+
 .ad-column__choose__name {
+  border-radius: 10px 10px 0 0;
   font-family: var(--global-font-cool);
   font-size: 20px;
   align-self: flex-end;
@@ -10,10 +15,22 @@
 
 .ad-column__choose__name_dark {
   color: var(--black-color);
+  background-color: var(--global-yellow-color);
 }
 
 .ad-column__choose__name_light {
   color: var(--global-yellow-color);
+  background-color: var(--global-green-color);
+}
+
+.ad-column__input-group:hover {
+  border: 1px solid var(--global-orange-color);
+  border-radius: 10px;
+}
+
+.ad-column__input-group:focus-within {
+  border: 1px solid var(--global-orange-color);
+  border-radius: 10px;
 }
 
 
@@ -21,24 +38,38 @@
   align-self: center;
 }
 
+.ad-column__image_style {
+  opacity: 70%;
+}
+
 .ad-column__image_size {
   @media screen and (min-height: 10px) {
-    width: 25px;
-    height: 25px;
+    width: 15px;
+    height: 15px;
   }
 
   @media screen and (min-height: 400px) {
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
   }
 
   @media screen and (min-height: 610px) {
-    width: 35px;
-    height: 35px;
+    width: 20px;
+    height: 20px;
   }
 
   @media screen and (min-height: 810px) {
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
   }
+}
+
+.ad-column__input {
+  border: none;
+  padding: 0;
+  margin: 2px 4px 3px 0;
+}
+
+.ad-column__input:focus {
+  box-shadow: none;
 }

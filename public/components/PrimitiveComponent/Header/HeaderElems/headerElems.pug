@@ -1,0 +1,15 @@
+mixin ref(r, d)
+    div.pl-4.pb-3.align-self-end
+        div.header-elems__ref(data-name=d)= r
+
+div.row.d-flex.justify-content-start
+    div.pl-lg-4.header-elems__name LOSTIES
+    if (formType)
+        if formType === 'login'
+            +ref('sign up', 'signup')
+        if formType === 'signup'
+            +ref('login', 'login')
+    else
+        if !user
+            +ref('sign up', 'signup')
+            +ref('login', 'login')

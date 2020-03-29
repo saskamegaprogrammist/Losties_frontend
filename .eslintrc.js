@@ -10,6 +10,5 @@ module.exports = {
     ],
     rules: {
         '@typescript-eslint/no-var-requires' :  ["warn"],
-        '@typescript-eslint/no-empty-function' : ["warn"]
     }
 };

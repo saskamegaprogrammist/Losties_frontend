@@ -27,14 +27,15 @@ class BasicComponent {
 	}
 
 	create(identities: Array<string> = null, type: string = null) {
-
+		// implement this
 	}
 
 	render() {
+		// implement this
 	}
 
 	renderTo(selector: SelectorString) {
-
+		// implement this
 	}
 }
 
