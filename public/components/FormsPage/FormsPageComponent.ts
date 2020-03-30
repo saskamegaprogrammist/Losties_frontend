@@ -16,13 +16,8 @@ class FormsPageComponent extends BasicComponent {
 
     create(identities: Array<string> = null, type: string = null) {
         this.data.formType = type;
-        if (this._primitiveComponent === null) {
-            this._primitiveComponent = new PrimitiveComponent(this.data, this.parent);
-            this._primitiveComponent.render();
-        } else {
-            console.log('geg');
-            this._primitiveComponent.rerender(this.data);
-        }
+        this._primitiveComponent = new PrimitiveComponent(this.data, this.parent);
+        this._primitiveComponent.render();
         this.renderTo(this._headSelector);
         this.createHandlers();
     }

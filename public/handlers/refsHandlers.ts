@@ -6,4 +6,5 @@ const refHandler: Handler = function (selector: SelectorString) {
     document.querySelectorAll(selector.selector).forEach((ref: HTMLElement) =>
         ref.addEventListener('click', (event) => router.go((event.target as HTMLElement).dataset.name)));
 };
+
 export {refHandler};

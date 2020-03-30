@@ -7,9 +7,11 @@ import {refHandler} from "../../../../handlers/refsHandlers";
 class HeaderElemsComponent extends BasicComponent {
 
     private _headerRef: SelectorString =  new SelectorString(".header-elems__ref");
+    private _logo: SelectorString =  new SelectorString(".header-elems__name");
 
     createHandlers() {
         refHandler(this._headerRef);
+        refHandler(this._logo);
     }
 
     render() {

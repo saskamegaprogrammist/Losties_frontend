@@ -17,6 +17,11 @@ class MainPageComponent extends BasicComponent {
             this._primitiveComponent.render();
         }
         this.renderTo(this._headSelector);
+        this.createHandlers();
+    }
+
+    createHandlers() {
+        this._primitiveComponent.createHandlers();
     }
 
     render() {
