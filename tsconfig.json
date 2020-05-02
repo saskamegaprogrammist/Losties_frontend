@@ -5,7 +5,14 @@
     "module": "es6",
     "target": "es5",
     "jsx": "react",
-    "allowJs": true
+    "allowJs": true ,
+    "baseUrl": ".",
+    "paths": {
+      "@utils/*": ["public/utils/*"],
+      "@handlers/*": ["public/handlers/*"],
+      "@queries/*": ["public/backendQueries/*"],
+      "@components/*": ["public/components/*"]
+    }
   },
   "exclude": [
     "node_modules"

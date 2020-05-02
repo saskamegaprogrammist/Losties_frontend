@@ -5,14 +5,25 @@ div.row.d-flex.h-75
                 div.forms-page__name Sign up
             if formType === 'login'
                 div.forms-page__name Login
-        if formType === 'signup'
+        form.forms-page__form
+            if formType === 'signup'
+                div.form-group
+                    input.form-control.forms-page__input(placeholder='firstname' name='firstname' type='firstname')
+                    div.invalid-feedback
+                div.form-group
+                    input.form-control.forms-page__input(placeholder='lastname' name='lastname' type='lastname')
+                    div.invalid-feedback
+                div.form-group
+                    input.form-control.forms-page__input(placeholder='phone' name='phone' type='phone')
+                    div.invalid-feedback
+                div.form-group
+                    input.form-control.forms-page__input(placeholder='nickname' name='nickname' type='nickname')
+                    div.invalid-feedback
             div.form-group
-                input.form-control.forms-page__input(placeholder='full name')
-        div.form-group
-            input.form-control.forms-page__input(placeholder='email' type='email')
-            div.invalid-feedback
-        div.form-group
-            input.form-control.forms-page__input(placeholder='password' type='password')
-            div.invalid-feedback
-        button.btn.forms-page__button(type="submit") submit
+                input.form-control.forms-page__input(placeholder='email' name='email'  type='email')
+                div.invalid-feedback
+            div.form-group
+                input.form-control.forms-page__input(placeholder='password' name='password' type='password')
+                div.invalid-feedback
+            button.btn.forms-page__button(type="submit") submit
 

@@ -1,8 +1,8 @@
-import BasicComponent from "../../../BasicComponent";
+import BasicComponent from "@components/BasicComponent";
 const headerElemsTemplate = require('./headerElems.pug');
 import './header-elems.scss'
-import SelectorString from "../../../../utils/SelectorString";
-import {refHandler} from "../../../../handlers/refsHandlers";
+import SelectorString from "@utils/SelectorString";
+import {refHandler} from "@handlers/refsHandlers";
 
 class HeaderElemsComponent extends BasicComponent {
 

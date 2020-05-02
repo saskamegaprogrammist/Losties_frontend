@@ -18,6 +18,12 @@ module.exports = {
 	},
 	resolve: {
 		extensions: [ '.tsx', '.ts', '.js' ],
+		alias: {
+			'@utils':  path.resolve(__dirname ,'public/utils'),
+			'@handlers':  path.resolve(__dirname ,'public/handlers'),
+			'@queries':  path.resolve(__dirname ,'public/backendQueries'),
+			'@components': path.resolve(__dirname ,'public/components'),
+		},
 	},
 
 	module:{

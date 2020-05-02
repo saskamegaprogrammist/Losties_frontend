@@ -1,7 +1,7 @@
-import SelectorString from "./SelectorString";
+import SelectorString from "@utils/SelectorString";
 
 interface Handler {
-    (selector: SelectorString): void;
+    (...selector: SelectorString[]): void;
 }
 
 export default Handler;
