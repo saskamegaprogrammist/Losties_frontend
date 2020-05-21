@@ -15,13 +15,17 @@ class Route {
 
     createPath(args: Array<RouteArgument> = null): string {
         let argument: RouteArgument = new RouteArgument(emptyArg, "undefined");
-        if (args.length !== 0) {
-            argument = args.pop();
-        }
         if (this._parentRoute === null) {
+            if (args.length !== 0) {
+                argument = args.pop();
+            }
             return `/${this._keyWord}${argument.getPath()}`;
         } else {
-            return `${this._parentRoute.createPath(args)}/${this._keyWord}${argument.getPath()}`;
+            const parRoute = this._parentRoute.createPath(args);
+            if (args.length !== 0) {
+                argument = args.pop();
+            }
+            return `${parRoute}/${this._keyWord}${argument.getPath()}`;
         }
     }
 
@@ -45,6 +49,10 @@ class Route {
 
     get keyWord(): string {
         return this._keyWord;
+    }
+
+    get name(): string {
+        return this._name;
     }
 }
 

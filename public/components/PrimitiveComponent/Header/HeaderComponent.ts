@@ -23,7 +23,7 @@ class HeaderComponent extends BasicComponent {
     }
 
     renderUserInfo() {
-    	this._userInfoComponent = new UserInfoComponent({}, this.parent.querySelector(this._headSelector.selector));
+    	this._userInfoComponent = new UserInfoComponent(this.data, this.parent.querySelector(this._headSelector.selector));
         this._userInfoComponent.renderTo(this._userInfoBlockSelector);
     }
 
@@ -34,7 +34,7 @@ class HeaderComponent extends BasicComponent {
 
     renderTo(selectorString: SelectorString) {
     	this.parent.querySelector(selectorString.selector).innerHTML = this.render();
-    	this.renderUserInfo();
+    	if (this.data.user != null) this.renderUserInfo();
         this.renderHeaderElems();
     }
 }

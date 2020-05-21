@@ -4,16 +4,19 @@ import SelectorString from "../../utils/SelectorString";
 import AdColumnComponent from "./AdColumn/AdColumnComponent"
 import PrimitiveComponent from "../PrimitiveComponent/PrimitiveComponent";
 import './main-page.scss';
+import {data} from "../../main";
+import {saveUser} from "@handlers/basicActions";
 class MainPageComponent extends BasicComponent {
 
     private _headSelector: SelectorString =  new SelectorString(".main-container");
     private _adColumnSelector: SelectorString =  new SelectorString(".ad-column");
     private _primitiveComponent: PrimitiveComponent;
 
-    create(identities: Array<string> = null) {
-        this.data.user = undefined;
+    async create(identities: Array<string> = null) {
+        await this.authorize();
+        this.data.user = data.user;
         if (!this._primitiveComponent) {
-            this._primitiveComponent =  new PrimitiveComponent({}, this.parent);
+            this._primitiveComponent = new PrimitiveComponent(this.data, this.parent);
             this._primitiveComponent.render();
         }
         this.renderTo(this._headSelector);

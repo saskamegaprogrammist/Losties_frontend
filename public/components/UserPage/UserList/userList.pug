@@ -1,0 +1,19 @@
+div.row
+    div.col-8.d-flex.flex-column.justify-content-start
+        ul.list-group.list-group-horizontal.user-page__list-group
+            li.list-group-item.user-page__list-item_left_size.user-page__list-item_left email
+            li.list-group-item.user-page__list-item.user-page__list-item_right_size.user-page__list-item_right=user.email
+        ul.list-group.list-group-horizontal.user-page__list-group
+            li.list-group-item.user-page__list-item_left_size.user-page__list-item_left firstname
+            li.list-group-item.user-page__list-item.user-page__list-item_right_size.user-page__list-item_right=user.firstname
+        ul.list-group.list-group-horizontal.user-page__list-group
+            li.list-group-item.user-page__list-item_left_size.user-page__list-item_left lastname
+            li.list-group-item.user-page__list-item.user-page__list-item_right_size.user-page__list-item_right=user.lastname
+        ul.list-group.list-group-horizontal.user-page__list-group
+            li.list-group-item.user-page__list-item_left_size.user-page__list-item_left nickname
+            li.list-group-item.user-page__list-item.user-page__list-item_right_size.user-page__list-item_right=user.nickname
+        ul.list-group.list-group-horizontal.user-page__list-group
+            li.list-group-item.user-page__list-item_left_size.user-page__list-item_left phone
+            li.list-group-item.user-page__list-item.user-page__list-item_right_size.user-page__list-item_right=user.phone
+div.row.user-page__button__row
+    button.btn.user-page__list-button(data-section="user-settings") change profile

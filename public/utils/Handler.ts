@@ -1,7 +1,8 @@
 import SelectorString from "@utils/SelectorString";
+import BasicComponent from "@components/BasicComponent";
 
 interface Handler {
-    (...selector: SelectorString[]): void;
+    (component: BasicComponent, ...selector: SelectorString[]): void;
 }
 
 export default Handler;

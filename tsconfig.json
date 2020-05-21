@@ -11,7 +11,8 @@
       "@utils/*": ["public/utils/*"],
       "@handlers/*": ["public/handlers/*"],
       "@queries/*": ["public/backendQueries/*"],
-      "@components/*": ["public/components/*"]
+      "@components/*": ["public/components/*"],
+      "@entities/*": ["public/entities/*"]
     }
   },
   "exclude": [

@@ -1,0 +1,24 @@
+.user-page__input {
+  border: solid 1px var(--global-orange-color);
+}
+
+.user-page__input::placeholder {
+  font-family: var(--global-font-main);
+}
+
+.user-page__input__name {
+  font-family: var(--global-font-main);
+  color: var(--global-orange-color);
+  font-size: 14px;
+}
+
+.user-page__sett-button {
+  font-family: var(--global-font-main);
+  background-color: var(--white-color);
+  color: var(--global-orange-color);
+  border-color: var(--global-orange-color);
+}
+
+.user-page__sett-button:hover {
+  color: var(--global-red-color);
+}

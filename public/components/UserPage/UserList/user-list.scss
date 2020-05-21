@@ -1,0 +1,43 @@
+.user-page__list-item {
+  text-overflow: ellipsis
+}
+
+.user-page__list-item_left_size {
+  width: 200px;
+}
+
+.user-page__list-item_right_size {
+  width: 300px;
+}
+
+.user-page__list-item_left {
+  font-family: var(--global-font-main);
+  font-size: 18px;
+  color: var(--white-color);
+  background-color: var(--global-orange-color);
+}
+
+.user-page__list-item_right {
+  font-family: var(--global-font-main);
+  font-size: 18px;
+  color: var(--black-color);
+}
+
+.user-page__list-group {
+  margin: 5px 0 5px 0;
+}
+
+.user-page__list-button {
+  font-family: var(--global-font-main);
+  background-color: var(--white-color);
+  color: var(--global-orange-color);
+  border-color: var(--global-orange-color);
+}
+
+.user-page__list-button:hover {
+  color: var(--global-red-color);
+}
+
+.user-page__button__row {
+  margin: 5px 0 0 0;
+}

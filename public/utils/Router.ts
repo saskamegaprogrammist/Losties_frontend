@@ -1,6 +1,7 @@
 import Route from "./Route";
 import BasicComponent from "../components/BasicComponent";
 import {emptyArg, RouteArgument} from "./RouteArgument";
+import {data} from "../main";
 
 class Router {
     private static __instance: Router;
@@ -18,6 +19,14 @@ class Router {
     register(route: Route) {
         this._routes.push(route);
         this._keyWords.push(route.keyWord);
+    }
+
+    find(routeName: string): Route {
+        for (const route of this._routes){
+            if (route.name == routeName) {
+                return route;
+            }
+        }
     }
 
     return() {
@@ -46,6 +55,7 @@ class Router {
         }
         const component: BasicComponent =  new route.componentName({}, this._globalParentElement);
         component.create(this.getStringArguments(identities), route.keyWord);
+        data.page = route.keyWord;
     }
 
     go(routeName: string, ...identities: Array<RouteArgument>) {
@@ -66,6 +76,7 @@ class Router {
             if (route.compare(keywordsCloned)) {
                 const component: BasicComponent =  new route.componentName({}, this._globalParentElement);
                 component.create(identities, route.keyWord);
+                data.page = route.keyWord;
                 return;
             }
         }

@@ -1,5 +1,6 @@
 import SelectorString from "../utils/SelectorString";
 import EditableObject from "../utils/EditableObject";
+import {saveUser} from "@handlers/basicActions";
 
 class BasicComponent {
 	private _data: EditableObject;
@@ -26,8 +27,12 @@ class BasicComponent {
 		this._parent = parent;
 	}
 
-	create(identities: Array<string> = null, type: string = null) {
-		// implement this
+	async authorize() {
+		await saveUser();
+	}
+
+	async create(identities: Array<string> = null, type: string = null) {
+		await this.authorize();
 	}
 
 	render() {
@@ -37,6 +42,10 @@ class BasicComponent {
 	renderTo(selector: SelectorString) {
 		// implement this
 	}
+
+    createHandlers() {
+        //implement this
+    }
 }
 
 export default BasicComponent;

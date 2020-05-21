@@ -11,6 +11,7 @@ const responseStatuses: { [key: number]: string } = {
 };
 
 const API = {
+    auth: '/auth',
     logout: '/logout',
     login: '/login',
     signup : '/signup',
@@ -18,6 +19,7 @@ const API = {
         return `/user/${id}`;
     },
 };
+
 
 
 export {API, responseStatuses}

@@ -5,7 +5,7 @@ class FetchData {
     private _credentials: string;
     private _mode: string;
 
-    constructor(headers: object = {}, method = 'GET', body: object = {}, credentials = 'include', mode = 'no-cors') {
+    constructor(headers: object = {}, method = 'GET', body: object = {}, credentials = 'include', mode = 'cors') {
         this._headers = headers;
         this._method= method;
         this._body = body;
@@ -34,11 +34,15 @@ class FetchData {
     }
 
     getObject(): object {
+        let body: any = null;
+        if (Object.keys(this._body).length !== 0) {
+            body = JSON.stringify(this._body);
+        }
         return {
             method: this._method,
             mode: this._mode,
             credentials: this._credentials,
-            body: JSON.stringify(this._body)
+            body: body
         }
     }
 
@@ -53,13 +57,19 @@ class Fetch {
         this._baseData = new FetchData();
     }
 
-    createFetch({path = '/', method  = 'GET', data = {}, contentType = ''} = {}) {
+    async createFetch({path = '/', method  = 'GET', data = {}, contentType = ''} = {}) {
         this._baseData.body = data;
         this._baseData.headers = {
             'Content-Type' : contentType
         };
         this._baseData.method = method;
-        return fetch(encodeURI(`${this._url}${path}`), this._baseData.getObject());
+        try {
+            console.log(this._baseData.getObject());
+            const response = await fetch(encodeURI(`${this._url}${path}`), this._baseData.getObject());
+            return response;
+        } catch (error) {
+            return error;
+        }
     }
 
     post(params = {}) {

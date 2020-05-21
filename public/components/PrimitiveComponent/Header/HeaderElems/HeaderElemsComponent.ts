@@ -10,8 +10,8 @@ class HeaderElemsComponent extends BasicComponent {
     private _logo: SelectorString =  new SelectorString(".header-elems__name");
 
     createHandlers() {
-        refHandler(this._headerRef);
-        refHandler(this._logo);
+        refHandler(this, this._headerRef);
+        refHandler(this, this._logo);
     }
 
     render() {

@@ -4,6 +4,7 @@ import SelectorString from "../../utils/SelectorString";
 import './primitive.scss';
 import MainContainerComponent from "./MainContainer/MainContainerComponent";
 import EditableObject from "../../utils/EditableObject";
+import {data} from "../../main";
 
 class PrimitiveComponent extends BasicComponent {
 
@@ -35,6 +36,7 @@ class PrimitiveComponent extends BasicComponent {
 	}
 
 	render() {
+		this.data.user = data.user;
 		if (this._headerComponent) {
 			this.rerender();
 		} else {

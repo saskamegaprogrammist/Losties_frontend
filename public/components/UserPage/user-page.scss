@@ -1,0 +1,55 @@
+.user-page__container {
+  margin: 0 0 0 20px;
+}
+
+
+.user-page__container_size {
+  @media screen and (min-height: 10px) {
+    height: 320px;
+  }
+
+  @media screen and (min-height: 400px) {
+    height: 530px;
+  }
+
+
+  @media screen and (min-height: 610px) {
+    height: 710px;
+  }
+
+  @media screen and (min-height: 810px) {
+    height: 845px;
+  }
+}
+
+.user-page__sidebar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @media screen and (min-height: 10px) {
+    top: 80px;
+  }
+
+  @media screen and (min-height: 610px) {
+    top: 100px;
+  }
+  z-index: 2;
+}
+
+.user-page__sidebar_style {
+  background-color: var(--global-yellow-color);
+  color: var(--white-color);
+  font-family: var(--global-font-cool);
+}
+
+.user-page__sidebar-item_style {
+  background-color: var(--global-yellow-color);
+  color: var(--global-orange-color);
+  cursor: pointer;
+}
+
+.user-page__sidebar-item_style:hover {
+  color: var(--black-color);
+
+}

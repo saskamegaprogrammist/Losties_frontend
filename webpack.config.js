@@ -23,6 +23,7 @@ module.exports = {
 			'@handlers':  path.resolve(__dirname ,'public/handlers'),
 			'@queries':  path.resolve(__dirname ,'public/backendQueries'),
 			'@components': path.resolve(__dirname ,'public/components'),
+			'@entities': path.resolve(__dirname ,'public/entities'),
 		},
 	},
 
