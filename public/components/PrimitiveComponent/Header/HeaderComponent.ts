@@ -16,6 +16,7 @@ class HeaderComponent extends BasicComponent {
 
     createHandlers(){
         this._headerElemsComponent.createHandlers();
+        if (this.data.user != null) this._userInfoComponent.createHandlers();
     }
 
     render() {

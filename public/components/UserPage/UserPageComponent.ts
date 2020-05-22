@@ -6,11 +6,13 @@ import './user-page.scss';
 import {data, router} from "../../main";
 import UserListComponent from "@components/UserPage/UserList/UserListComponent";
 import UserFormComponent from "@components/UserPage/UserForm/UserFormComponent";
+import {userNavigate} from "@handlers/userPageHandlers";
 
 class UserPageComponent extends BasicComponent {
 
     private _headSelector: SelectorString =  new SelectorString(".main-container");
     private _userPageSelector: SelectorString =  new SelectorString(".user-page__main");
+    private _navigateRefSelector: SelectorString = new SelectorString(".user-page__sidebar-item");
     private _primitiveComponent: PrimitiveComponent;
     private _pageType: string;
     private __innerComponent: BasicComponent;
@@ -41,6 +43,7 @@ class UserPageComponent extends BasicComponent {
     createHandlers() {
         this._primitiveComponent.createHandlers();
         this.__innerComponent.createHandlers();
+        userNavigate(this, this._navigateRefSelector);
     }
 
     renderUserList() {
@@ -63,6 +66,23 @@ class UserPageComponent extends BasicComponent {
         this.parent.querySelector(selectorString.selector).innerHTML += this.render();
         if (this._pageType == "user") this.renderUserList();
         if (this._pageType == "settings") this.renderUserForm();
+    }
+
+    hideNavColor(ref: HTMLElement) {
+        if (ref.classList.contains(`user-page__sidebar-item_style_at`)){
+            ref.classList.remove(`user-page__sidebar-item_style_at`);
+        }
+    }
+
+    showNavColor(ref: HTMLElement) {
+        if (!ref.classList.contains(`user-page__sidebar-item_style_at`)){
+            ref.className = `${ref.className} user-page__sidebar-item_style_at`;
+        }
+        ref.parentElement.childNodes.forEach(node => {
+            if ((node as HTMLElement) !== ref) {
+                this.hideNavColor(node as HTMLElement);
+            }
+        });
     }
 }
 

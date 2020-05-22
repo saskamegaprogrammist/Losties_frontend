@@ -1,22 +1,27 @@
 .header {
 
 }
+
+.header_style {
+  background-color: var(--global-orange-color);
+  color: var(--white-color);
+}
 .header_size {
 
   @media screen and (min-height: 10px) {
-    height: 80px;
+    height: 60px;
   }
 
   @media screen and (min-height: 400px) {
-    height: 80px;
+    height: 60px;
   }
 
 
   @media screen and (min-height: 610px) {
-    height: 100px;
+    height: 80px;
   }
 
   @media screen and (min-height: 810px) {
-    height: 100px;
+    height: 80px;
   }
 }

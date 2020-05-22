@@ -1,24 +1,24 @@
 .user-page__container {
-  margin: 0 0 0 20px;
+  padding: 20px 0 0 20px;
 }
 
 
 .user-page__container_size {
   @media screen and (min-height: 10px) {
-    height: 320px;
+    height: 340px;
   }
 
   @media screen and (min-height: 400px) {
-    height: 530px;
+    height: 550px;
   }
 
 
   @media screen and (min-height: 610px) {
-    height: 710px;
+    height: 730px;
   }
 
   @media screen and (min-height: 810px) {
-    height: 845px;
+    height: 865px;
   }
 }
 
@@ -28,28 +28,31 @@
   right: 0;
   bottom: 0;
   @media screen and (min-height: 10px) {
-    top: 80px;
+    top: 60px;
   }
 
   @media screen and (min-height: 610px) {
-    top: 100px;
+    top: 80px;
   }
   z-index: 2;
 }
 
 .user-page__sidebar_style {
-  background-color: var(--global-yellow-color);
-  color: var(--white-color);
+  border-right: 1px solid var(--global-orange-color);
+  color: var(--global-orange-color);
   font-family: var(--global-font-cool);
 }
 
 .user-page__sidebar-item_style {
-  background-color: var(--global-yellow-color);
+
   color: var(--global-orange-color);
   cursor: pointer;
 }
 
-.user-page__sidebar-item_style:hover {
-  color: var(--black-color);
+.user-page__sidebar-item_style_at {
+  color: var(--global-red-color);
+}
 
+.user-page__sidebar-item_style:hover {
+  color: var(--global-red-color);
 }

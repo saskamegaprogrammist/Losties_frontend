@@ -9,10 +9,15 @@ import {changeUser, login, signup} from "@queries/user/user";
 import User from "@entities/User";
 import {SignUpFormElements} from "@handlers/formsHandlers";
 import UserFormComponent from "@components/UserPage/UserForm/UserFormComponent";
+import BasicComponent from "@components/BasicComponent";
 
-const changeProfileHandler: Handler = function (component: UserPageComponent, selector: SelectorString) {
-    document.querySelector(selector.selector).addEventListener('click', (event) =>
-        router.go((event.target as HTMLElement).dataset.section, new RouteArgument(String(data.user.id),"id")));
+const userNavigate: Handler = function (component: BasicComponent, selector: SelectorString) {
+    document.querySelector(selector.selector).addEventListener('click', (event) => {
+        if (component instanceof UserPageComponent) {
+            component.showNavColor((event.target as HTMLElement));
+        }
+        router.go((event.target as HTMLElement).dataset.section, new RouteArgument(String(data.user.id),"id"));
+    })
 };
 
 const checkChanges = function (elements: SignUpFormElements): boolean {
@@ -96,4 +101,5 @@ const userFormHandler: Handler = function (component: UserFormComponent, selecto
     form.querySelector(selectorSubmit.selector).addEventListener('click', (event) => sendForm(component, event,form) );
 };
 
-export {changeProfileHandler, userFormHandler}
+
+export {userNavigate, userFormHandler}

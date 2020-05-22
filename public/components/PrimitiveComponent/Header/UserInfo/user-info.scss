@@ -1,11 +1,17 @@
 .user-info__row {
+  cursor: pointer;
 }
 
 
 .user-info__image {
 }
 
+.user-info__image_style {
+  border: 2px solid var(--white-color);
+}
+
 .user-info__row__text {
   font-family: var(--global-font-main);
+  color: var(--white-color);
   font-size: 18px;
 }
