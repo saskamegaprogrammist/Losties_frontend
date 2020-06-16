@@ -4,7 +4,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"long comment \"",
-    "start": "nodemon .",
+    "start": "nodemon server/server.js",
     "vercel-start": "node server/server.js",
     "prestart": "webpack-cli"
   },
@@ -20,6 +20,7 @@
     "body-parser": "latest",
     "bootstrap": "^4.4.1",
     "express": "^4.17.1",
+    "nodemon": "^1.19.1",
     "express-history-api-fallback": "^2.2.1",
     "pug": "^2.0.4",
     "sass-loader": "^8.0.0",
