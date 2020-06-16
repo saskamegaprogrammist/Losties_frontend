@@ -1,0 +1,41 @@
+.ads__header {
+  padding: 10px 0 0 0;
+  margin: 0 0 5px 0;
+
+}
+
+.ads__header__name {
+  border-radius: 10px 10px 0 0;
+  font-family: var(--global-font-cool);
+  font-size: 24px;
+  align-self: flex-end;
+}
+
+.ads__header__name_dark {
+  color: var(--black-color);
+  background-color: var(--global-yellow-color);
+}
+
+.ads__header__name_light {
+  color: var(--global-yellow-color);
+  background-color: var(--global-green-color);
+}
+
+.ads__button {
+}
+
+.ads__button_style {
+  font-family: var(--global-font-main);
+  background-color: var(--white-color);
+  color: var(--global-green-color);
+  border-color: var(--global-green-color);
+}
+
+
+.ads__button_style:hover {
+  color: var(--black-color);
+}
+
+.ads__header__name:hover{
+  cursor: pointer;
+}

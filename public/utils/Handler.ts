@@ -5,4 +5,12 @@ interface Handler {
     (component: BasicComponent, ...selector: SelectorString[]): void;
 }
 
-export default Handler;
+interface HandlerPhoto {
+    (component: BasicComponent, id:number,  ...selector: SelectorString[]): void;
+}
+
+interface HandlerAd {
+    (component: BasicComponent, id:string,  ...selector: SelectorString[]): void;
+}
+
+export {Handler, HandlerPhoto}

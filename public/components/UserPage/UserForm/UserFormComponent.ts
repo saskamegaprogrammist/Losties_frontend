@@ -4,6 +4,7 @@ import './user-form.scss';
 import SelectorString from "../../../utils/SelectorString";
 import {formHandler, SignUpFormElements} from "@handlers/formsHandlers";
 import {userFormHandler} from "@handlers/userPageHandlers";
+import {adFormHandler, fileLabelHandler, textAreaHandler} from "@handlers/adFormHandlers";
 
 class UserFormComponent extends BasicComponent {
 
@@ -11,9 +12,13 @@ class UserFormComponent extends BasicComponent {
     private _formSelector: SelectorString =  new SelectorString(".user-page__form");
     private _submitButtonSelector: SelectorString =  new SelectorString(".user-page__sett-button");
     private _errorFieldSelector: SelectorString =  new SelectorString(".form__error");
+    private _labelSelector: SelectorString = new SelectorString(".user-page__label");
+    private _fileInputSelector: SelectorString = new SelectorString(".custom-file-input");
+
 
     createHandlers() {
         userFormHandler(this, this._formSelector, this._submitButtonSelector);
+        fileLabelHandler(this, this._fileInputSelector, this._labelSelector);
     }
 
     render() {

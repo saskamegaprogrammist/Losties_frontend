@@ -9,7 +9,7 @@
 .ad-column__choose__name {
   border-radius: 10px 10px 0 0;
   font-family: var(--global-font-cool);
-  font-size: 20px;
+  font-size: 24px;
   align-self: flex-end;
 }
 
@@ -21,6 +21,10 @@
 .ad-column__choose__name_light {
   color: var(--global-yellow-color);
   background-color: var(--global-green-color);
+}
+
+.ad-column__choose__name:hover {
+  cursor: pointer;
 }
 
 .ad-column__input-group:hover {
@@ -72,4 +76,48 @@
 
 .ad-column__input:focus {
   box-shadow: none;
+}
+
+.ad-column__window {
+  margin: 10px 0 0 10px;
+}
+
+.ad-column__dropdown {
+  margin: 0 0 0 10px;
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+}
+
+.ad-column__dropdown-content {
+  overflow: hidden;
+  max-height: 0;
+  position: absolute;
+  transition: all .5s ease-in-out;
+  z-index: 2;
+}
+
+.ad-column__dropdown-button_style {
+  font-family: var(--global-font-main);
+  background-color: var(--white-color);
+  color: var(--global-green-color);
+  border-color: var(--global-green-color);
+}
+
+.ad-column__dropdown-content_clicked {
+  max-height: 40vh;
+}
+
+.ad-column__dropdown__option {
+  padding: 5px 0 0 0;
+  border-bottom: 1px solid var(--global-green-color);
+}
+.ad-column__dropdown__option:hover {
+  cursor: pointer;
+}
+.ad-column__dropdown__option_style {
+  background-color: var(--white-color);
+  font-family: var(--global-font-main);
+  font-size: 16px;
+  color: var(--global-green-color);
 }

@@ -1,0 +1,38 @@
+div.row.d-flex.flex-row.ad-page.ad-page__container_size.ad-page__container
+    nav.col-2.d-flex.flex-column.ad-page__sidebar.ad-page__sidebar_style.ad-page__container_size
+        div.row.ad-page__sidebar__user-row
+            div.col-6.d-flex.flex-column.justify-content-center
+                img.img-fluid.ad-page__sidebar__user-row__image.ad-page__sidebar__user-row__image_style.rounded-circle(src='/images/wh.png')
+            div.col-6.d-flex.flex-column.justify-content-center
+                div.row.align-self-center.ad-page__sidebar__user-row__row__headline=`${user.firstname} ${user.lastname}`
+                div.row.align-self-center.ad-page__sidebar__user-row__row__text=user.nickname
+                div.row.align-self-center.ad-page__sidebar__user-row__row__text=user.email
+                div.row.align-self-center.ad-page__sidebar__user-row__row__text=`${userAds} ads`
+    div.col-6.offset-2.ad-page__main
+        div.row.d-flex.flex-column
+            div.row.ad-page__title.ad-page__title_style(data-section='ad-title')=ad.title
+            div.row.ad-page__section.ad-page__section_style(data-section='ad-text')=ad.text
+            div.d-flex.flex-column.justify-content-start
+                ul.list-group.list-group-horizontal.ad__list-group
+                    li.list-group-item.ad__list-item_left_size.ad__list-item_left animal
+                    li.list-group-item.ad__list-item.ad__list-item_right_size.ad__list-item_right(data-section='pet-animal')=pet.animal
+                ul.list-group.list-group-horizontal.ad__list-group
+                    li.list-group-item.ad__list-item_left_size.ad__list-item_left breed
+                    li.list-group-item.ad__list-item.ad__list-item_right_size.ad__list-item_right(data-section='pet-breed')=pet.breed
+                ul.list-group.list-group-horizontal.ad__list-group
+                    li.list-group-item.ad__list-item_left_size.ad__list-item_left name
+                    li.list-group-item.ad__list-item.ad__list-item_right_size.ad__list-item_right(data-section='pet-name')=pet.name
+                ul.list-group.list-group-horizontal.ad__list-group
+                    li.list-group-item.ad__list-item_left_size.ad__list-item_left color
+                    li.list-group-item.ad__list-item.ad__list-item_right_size.ad__list-item_right(data-section='pet-color')=pet.color
+            div.row.ad-page__section.ad-page__section_style(data-section='ad-contacts')=ad.contacts
+            div.row.ad-page__section.ad-page__section_style(data-section='ad-time')=ad.time
+            div.row.ad-page__date.ad-page__date_style(data-section='ad-date')=ad.date
+        div.row.d-flex.flex-column.ad-page__comments
+        if me
+            div.ad-page__section.ad-page__section_help Write a comment
+            textarea.ad-page__textarea.ad-page__textarea_size(placeholder='text' name='text' type='text')
+            button.btn.ad-page__sett-button(type="submit") submit
+        else
+            div.ad-page__section.ad-page__section_help Please, sign up to leave a comment
+    div.col-4#map

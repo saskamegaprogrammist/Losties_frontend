@@ -3,7 +3,7 @@ mixin ref(r, d)
         div.header-elems__ref(data-name=d)= r
 
 div.row.d-flex.justify-content-start
-    div.pl-lg-4.header-elems__name(data-name='main-page') LOSTIES
+    div.pl-lg-4.header-elems__name(data-name='main-page') losties
     if (formType)
         if formType === 'login'
             +ref('sign up', 'signup')
@@ -13,3 +13,5 @@ div.row.d-flex.justify-content-start
         if !user
             +ref('sign up', 'signup')
             +ref('login', 'login')
+        else
+            +ref('logout', 'logout')

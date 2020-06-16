@@ -1,4 +1,4 @@
-import {auth} from "@queries/user/user";
+import {auth} from "@queries/user";
 import User from "@entities/User";
 import {data} from "../main";
 

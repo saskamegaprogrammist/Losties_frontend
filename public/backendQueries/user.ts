@@ -1,5 +1,5 @@
 import {API, responseStatuses} from "@utils/constants";
-import {data, fetch, router} from "../../main";
+import {data, fetch, router} from "../main";
 import User from "@entities/User";
 
 async function auth() {
@@ -24,6 +24,25 @@ async function changeUser(params: User) {
         path: API.user(data.user.id),
         data: params,
         contentType: 'application/json;charset=utf-8'
+    });
+    const reponseString: string = responseStatuses[response.status];
+    switch (reponseString) {
+        case "OK":
+            return response.json();
+        case "Bad Request":
+            throw new Error(
+                `Sorry, this username or email is already taken`
+            );
+        default:
+            throw new Error(
+                `Sorry, there is an internal server error`
+            );
+    }
+}
+
+async function getUser(id: number) {
+    const response = await fetch.get({
+        path: API.user(id)
     });
     const reponseString: string = responseStatuses[response.status];
     switch (reponseString) {
@@ -82,4 +101,21 @@ async function login(params: User) {
     }
 }
 
-export {signup, login, auth, changeUser}
+async function logout() {
+    const response = await fetch.delete({path: API.logout});
+    const reponseString: string = responseStatuses[response.status];
+    switch (reponseString) {
+        case "OK":
+            return response.json();
+        case "Bad Request":
+            return new Error(
+                `Sorry, wrong request`
+            );
+        default:
+            return new Error(
+                `Sorry, there is an internal server error`
+            );
+    }
+}
+
+export {signup, login, auth, logout, changeUser, getUser}

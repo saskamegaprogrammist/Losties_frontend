@@ -1,0 +1,139 @@
+.ad__img-container_size {
+  @media screen and (min-height: 10px) {
+    height: 200px;
+    width: 150px;
+  }
+
+  @media screen and (min-height: 400px) {
+    height: 240px;
+    width: 180px;
+  }
+
+  @media screen and (min-height: 610px) {
+    height: 300px;
+    width: 225px;
+  }
+
+  @media screen and (min-height: 810px) {
+    height: 360px;
+    width: 240px;
+  }
+}
+
+.ad__img_size {
+  @media screen and (min-height: 10px) {
+    height: 200px;
+    width: 150px;
+  }
+
+  @media screen and (min-height: 400px) {
+    height: 240px;
+    width: 180px;
+  }
+
+  @media screen and (min-height: 610px) {
+    height: 300px;
+    width: 225px;
+  }
+
+  @media screen and (min-height: 810px) {
+    height: 360px;
+    width: 240px;
+  }
+}
+
+.ad__row_size {
+  @media screen and (min-width: 10px) {
+    width: 600px;
+  }
+
+  @media screen and (min-width: 800px) {
+    width: 8000px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    width: 1000px;
+  }
+}
+
+.ad__list-item_left {
+  font-family: var(--global-font-main);
+  font-size: 18px;
+  color: var(--white-color);
+  background-color: var(--global-green-color);
+}
+
+.ad__list-item_right {
+  font-family: var(--global-font-main);
+  font-size: 18px;
+  color: var(--black-color);
+}
+
+.ad__list-group {
+  margin: 5px 0 5px 0;
+}
+
+.ad__field{
+  padding: 0 0 0 10px;
+}
+
+.ad__field_style {
+  font-family: var(--global-font-main);
+  color: var(--black-color);
+  font-size: 20px;
+}
+
+.ad__field_header {
+  font-family: var(--global-font-cool);
+  color: var(--global-green-color);
+  font-size: 24px;
+}
+
+.ad__field_date {
+  font-family: var(--global-font-main);
+  color: var(--global-green-color);
+  font-size: 16px;
+  width: fit-content;
+  margin: 0 0 0 auto;
+}
+
+
+.comment__user {
+  padding: 5px 0 0 5px;
+}
+
+.comment__user_style {
+  font-family: var(--global-font-cool);
+  color: var(--global-green-color);
+  font-size: 20px;
+}
+
+.comment__text {
+  padding: 5px 0 0 5px;
+}
+
+.comment__text_style {
+  font-family: var(--global-font-main);
+  color: var(--black-color);
+  font-size: 16px;
+}
+
+.comment__date {
+  width: fit-content;
+  margin: 0 0 0 auto;
+  padding: 5px 5px 0 0;
+}
+
+.comment__date_style {
+  font-family: var(--global-font-main);
+  color: var(--black-color);
+  font-size: 14px;
+}
+
+.comment {
+  margin: 5px 0 0 0;
+}
+.comment_style {
+  border-radius: 10px;
+  background-color: var(--global-yellow-color);
+}

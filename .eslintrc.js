@@ -10,5 +10,6 @@ module.exports = {
     ],
     rules: {
         '@typescript-eslint/no-var-requires' :  ["warn"],
+        '@typescript-eslint/ban-ts-ignore' : ["warn"]
     }
 };

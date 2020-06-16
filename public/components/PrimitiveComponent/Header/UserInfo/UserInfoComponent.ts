@@ -3,10 +3,14 @@ const userInfoTemplate = require('./userInfo.pug');
 import './user-info.scss';
 import SelectorString from "../../../../utils/SelectorString";
 import {refHandler, userRefHandler} from "@handlers/refsHandlers";
+import {getUserPicHeader} from "@handlers/picLoad";
+import {getUserAdsNumber} from "@queries/ad_user";
+import {data} from "../../../../main";
 
 class UserInfoComponent extends BasicComponent {
 
 	private _userInfoRef: SelectorString =  new SelectorString(".user-info");
+	private _userInfoImage: SelectorString =  new SelectorString(".user-info__image");
 
 
 	createHandlers() {
@@ -17,8 +21,9 @@ class UserInfoComponent extends BasicComponent {
 		return `${userInfoTemplate(this.data)}`;
 	}
 
-	renderTo(selectorString: SelectorString) {
+	async renderTo(selectorString: SelectorString) {
 		this.parent.querySelector(selectorString.selector).innerHTML = this.render();
+		getUserPicHeader(this, data.user.id, this._userInfoImage);
 	}
 }
 

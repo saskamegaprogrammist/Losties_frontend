@@ -8,14 +8,14 @@ const emptyArg = "";
 
 class RouteArgument {
     private _argument: string;
-    private _type: number;
-    constructor(argument: string = null, type: keyof typeof ArgTypes) {
+    private _type: ArgTypes;
+    constructor(argument: string = null, type: ArgTypes) {
         if (argument === null || argument === undefined) {
             this._argument = emptyArg;
-            this._type = ArgTypes["undefined"];
+            this._type = ArgTypes.undefined;
         } else {
             this._argument = argument;
-            this._type = ArgTypes[type];
+            this._type = type;
         }
     }
     getPath() {
@@ -37,4 +37,4 @@ class RouteArgument {
     }
 }
 
-export {emptyArg, RouteArgument};
+export {emptyArg, RouteArgument, ArgTypes};

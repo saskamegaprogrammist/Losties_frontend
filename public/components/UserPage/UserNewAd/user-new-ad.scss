@@ -1,0 +1,84 @@
+.user-new-ad__title {
+  margin: 0 0 10px 0;
+}
+
+
+.user-new-ad__title_style {
+  font-family: var(--global-font-cool);
+  color: var(--global-red-color);
+  font-size: 36px;
+}
+
+.user-new-ad__input {
+  color: var(--black-color);
+  border: solid 1px var(--global-green-color);
+  font-family: var(--global-font-main);
+}
+
+.user-new-ad__input::placeholder {
+  font-family: var(--global-font-main);
+}
+
+.user-new-ad__label {
+  font-family: var(--global-font-main);
+}
+
+.user-new-ad__input__name {
+  margin: 0 0 10px 0;
+}
+
+.user-new-ad__input__name_style {
+  font-family: var(--global-font-main);
+  color: var(--global-green-color);
+  font-size: 20px;
+}
+
+.user-new-ad__sett-button {
+  font-family: var(--global-font-main);
+  background-color: var(--white-color);
+  color: var(--global-green-color);
+  border-color: var(--global-green-color);
+}
+
+.user-new-ad__sett-button:hover {
+  color: var(--black-color);
+}
+
+.user-new-ad__textarea {
+  color: var(--black-color);
+  overflow: hidden;
+  font-family: var(--global-font-main);
+  border: solid 1px var(--global-green-color);
+}
+
+.user-new-ad__textarea::placeholder {
+  font-family: var(--global-font-main);
+}
+
+.user-new-ad__textarea_size {
+  @media screen and (min-height: 10px) {
+    min-height: 50px;
+    max-height: 250px;
+
+  }
+
+  @media screen and (min-height: 610px) {
+    min-height: 150px;
+    max-height: 350px;
+  }
+
+}
+
+.user-new-ad__select {
+  border: solid 1px var(--global-green-color);
+  font-family: var(--global-font-main);
+}
+
+.user-new-ad__option {
+  color: var(--black-color);
+  font-family: var(--global-font-main);
+}
+
+.user-new-ad__map {
+  height: 500px;
+}

@@ -1,12 +1,12 @@
 class FetchData {
-    private _headers: object;
+    private _ct: string;
     private _method: string;
     private _body: object;
     private _credentials: string;
     private _mode: string;
 
-    constructor(headers: object = {}, method = 'GET', body: object = {}, credentials = 'include', mode = 'cors') {
-        this._headers = headers;
+    constructor(ct = 'text/plain', method = 'GET', body: object = {}, credentials = 'include', mode = 'cors') {
+        this._ct = ct;
         this._method= method;
         this._body = body;
         this._credentials = credentials;
@@ -21,8 +21,8 @@ class FetchData {
         this._credentials = credentials;
     }
 
-    set headers(headers: object){
-        this._headers = headers;
+    set ct(ct: string){
+        this._ct = ct;
     }
 
     set mode(mode: string) {
@@ -35,10 +35,13 @@ class FetchData {
 
     getObject(): object {
         let body: any = null;
-        if (Object.keys(this._body).length !== 0) {
+        if (this._ct !== "multipart/form-data" && Object.keys(this._body).length !== 0) {
             body = JSON.stringify(this._body);
         }
-        return {
+        if (this._ct === "multipart/form-data") {
+            body = this._body;
+        }
+            return {
             method: this._method,
             mode: this._mode,
             credentials: this._credentials,
@@ -57,17 +60,18 @@ class Fetch {
         this._baseData = new FetchData();
     }
 
-    async createFetch({path = '/', method  = 'GET', data = {}, contentType = ''} = {}) {
+    async createFetch({path = '/', data = {}, contentType = '', method  = 'GET' } = {}) {
         this._baseData.body = data;
-        this._baseData.headers = {
-            'Content-Type' : contentType
-        };
+        this._baseData.ct = contentType;
+        console.log(contentType);
         this._baseData.method = method;
         try {
-            console.log(this._baseData.getObject());
-            const response = await fetch(encodeURI(`${this._url}${path}`), this._baseData.getObject());
+            const obj: any =  this._baseData.getObject();
+            console.log(obj);
+            const response = await fetch(encodeURI(`${this._url}${path}`),obj);
             return response;
         } catch (error) {
+            console.log(error);
             return error;
         }
     }

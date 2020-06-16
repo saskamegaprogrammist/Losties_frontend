@@ -1,6 +1,6 @@
-import Handler from "../utils/Handler";
+import {Handler} from "../utils/Handler";
 import SelectorString from "../utils/SelectorString";
-import {login, signup} from "@queries/user/user";
+import {login, signup} from "@queries/user";
 import User from "@entities/User";
 import BasicComponent from "@components/BasicComponent";
 import FormsPageComponent from "@components/FormsPage/FormsPageComponent";

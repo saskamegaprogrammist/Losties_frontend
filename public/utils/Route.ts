@@ -1,4 +1,4 @@
-import {emptyArg, RouteArgument} from "./RouteArgument";
+import {ArgTypes, emptyArg, RouteArgument} from "./RouteArgument";
 
 class Route {
     private _parentRoute: Route;
@@ -14,7 +14,7 @@ class Route {
     }
 
     createPath(args: Array<RouteArgument> = null): string {
-        let argument: RouteArgument = new RouteArgument(emptyArg, "undefined");
+        let argument: RouteArgument = new RouteArgument(emptyArg, ArgTypes.undefined);
         if (this._parentRoute === null) {
             if (args.length !== 0) {
                 argument = args.pop();

@@ -1,0 +1,47 @@
+div.user-new-ad__title.user-new-ad__title_style Enter your ad information
+form.user-new-ad__form
+    div.form-group
+        div.user-new-ad__input__name.user-new-ad__input__name_style Entitle your ad
+        input.form-control.user-new-ad__input(placeholder='title' name='title'  type='title')
+        div.invalid-feedback
+    div.form-group
+        div.user-new-ad__input__name.user-new-ad__input__name_style Choose your ad type
+        select.form-control.user-new-ad__select(name='type')
+            option.user-new-ad__option lost
+            option.user-new-ad__option found
+        div.invalid-feedback
+    div.form-group
+        div.user-new-ad__input__name.user-new-ad__input__name_style Write some info
+        textarea.form-control.user-new-ad__textarea.user-new-ad__textarea_size(placeholder='text' name='text' type='text')
+        div.invalid-feedback
+    div.form-group
+        div.user-new-ad__input__name.user-new-ad__input__name_style Write when the pet was found or lost
+        input.form-control.user-new-ad__input(placeholder='time' name='time')
+        div.invalid-feedback
+    div.form-group
+        div.user-new-ad__input__name.user-new-ad__input__name_style Put some contact info
+        input.form-control.user-new-ad__input(placeholder='contacts' name='contacts' type='contacts')
+        div.invalid-feedback
+    div.form-group
+        div.user-new-ad__input__name.user-new-ad__input__name_style Put pet name
+        input.form-control.user-new-ad__input(placeholder='pet name' name='petName' type='pet name')
+        div.invalid-feedback
+    div.form-group
+        div.user-new-ad__input__name.user-new-ad__input__name_style Put pet species
+        input.form-control.user-new-ad__input(placeholder='pet species' name='petSpecies' type='pet species')
+        div.invalid-feedback
+    div.form-group
+        div.user-new-ad__input__name.user-new-ad__input__name_style Put pet breed
+        input.form-control.user-new-ad__input(placeholder='pet breed' name='petBreed' type='pet breed')
+        div.invalid-feedback
+    div.form-group
+        div.user-new-ad__input__name.user-new-ad__input__name_style Put pet color
+        input.form-control.user-new-ad__input(placeholder='pet color' name='petColor' type='pet color')
+        div.invalid-feedback
+    div.input-group.mb-3
+        div.custom-file
+            input.custom-file-input.user-new-ad__input(placeholder='ad pic' type='file' name='adPic' accept='image/*')
+            label.custom-file-label.user-new-ad__label choose file
+    div.row.col-10.user-new-ad__map#map
+    div.form__error
+    button.btn.user-new-ad__sett-button(type="submit") submit

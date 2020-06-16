@@ -1,9 +1,17 @@
 div.row.ad-column__choose
-    div.col-4.ad-column__choose__name.ad-column__choose__name_dark Lost
-    div.col-4.ad-column__choose__name.ad-column__choose__name_light Found
-    div.col-4 sort by
+    div.col-8.row.ad-column__choose__names
+        div.col-6.ad-column__choose__name.ad-column__choose__name_dark(data-section="lost") lost
+        div.col-6.ad-column__choose__name.ad-column__choose__name_light(data-section="found") found
+    div.col-4.row.ad-column__dropdown-row
+        div.ad-column__dropdown
+            btn.btn.ad-column__dropdown-button.ad-column__dropdown-button_style.dropdown-toggle sort by
+            div.ad-column__dropdown-content
+                div.ad-column__dropdown__option.ad-column__dropdown__option_style(data-section='comments') comments
+                div.ad-column__dropdown__option.ad-column__dropdown__option_style(data-section='date') date
 div.row.pt-md-4
     div.input-group.ad-column__input-group
         img.input-group-prepend.img-fluid.ad-column__image.ad-column__image_style.ad-column__image_size(src='/images/loupe.png')
         input.form-control.ad-column__input(placeholder='search ad')
 div.row.ad-column__window
+
+    

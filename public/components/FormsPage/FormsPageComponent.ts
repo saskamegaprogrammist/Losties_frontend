@@ -5,6 +5,7 @@ import PrimitiveComponent from "../PrimitiveComponent/PrimitiveComponent";
 import './forms-page.scss'
 import {formHandler, SignUpFormElements} from "@handlers/formsHandlers";
 import {saveUser} from "@handlers/basicActions";
+import {data, router} from "../../main";
 
 class FormsPageComponent extends BasicComponent {
 
@@ -21,10 +22,13 @@ class FormsPageComponent extends BasicComponent {
     }
 
     async create(identities: Array<string> = null, type: string = null) {
+        if (data.user) {
+            router.go("main-page");
+        }
         await this.authorize();
         this.data.formType = type;
         this._primitiveComponent = new PrimitiveComponent(this.data, this.parent);
-        this._primitiveComponent.render();
+        await this._primitiveComponent.render();
         this.renderTo(this._headSelector);
         this.createHandlers();
     }

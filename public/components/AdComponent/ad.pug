@@ -1,0 +1,25 @@
+div.card.mb-3(id = `ad_${ad.id}`).ad__row_size
+    div.row.no-gutters.ad__row
+        div.col-md-4.ad__img-container
+            img.card-img.ad__img(src='/images/wh.png')
+            div.ad__link.ad__link_style view ad page
+        div.col-md-8.ad__content
+            div.card-body
+                div.card-title.ad__field.ad__field_header(data-section='ad-title')=ad.title
+                div.card-text.ad__field.ad__field_style(data-section='ad-text')=ad.text
+                div.d-flex.flex-column.justify-content-start
+                    ul.list-group.list-group-horizontal.ad__list-group
+                        li.list-group-item.ad__list-item_left_size.ad__list-item_left animal
+                        li.list-group-item.ad__list-item.ad__list-item_right_size.ad__list-item_right(data-section='pet-animal')=pet.animal
+                    ul.list-group.list-group-horizontal.ad__list-group
+                        li.list-group-item.ad__list-item_left_size.ad__list-item_left breed
+                        li.list-group-item.ad__list-item.ad__list-item_right_size.ad__list-item_right(data-section='pet-breed')=pet.breed
+                    ul.list-group.list-group-horizontal.ad__list-group
+                        li.list-group-item.ad__list-item_left_size.ad__list-item_left name
+                        li.list-group-item.ad__list-item.ad__list-item_right_size.ad__list-item_right(data-section='pet-name')=pet.name
+                    ul.list-group.list-group-horizontal.ad__list-group
+                        li.list-group-item.ad__list-item_left_size.ad__list-item_left color
+                        li.list-group-item.ad__list-item.ad__list-item_right_size.ad__list-item_right(data-section='pet-color')=pet.color
+                div.card-text.ad__field.ad__field_style(data-section='ad-contacts')=ad.contacts
+                div.card-text.ad__field.ad__field_style(data-section='ad-time')=ad.time
+                div.card-text.ad__field_date(data-section='ad-date')=ad.date

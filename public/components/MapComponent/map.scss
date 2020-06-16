@@ -1,0 +1,21 @@
+.map__section {
+  cursor: pointer;
+  margin: 5px 0 5px 5px;
+}
+
+.map__section_style {
+  font-family: var(--global-font-main);
+  color: var(--black-color);
+  font-size: 16px;
+}
+
+.map__title {
+  cursor: pointer;
+  margin: 5px 0 5px 5px;
+}
+
+.map__title_style {
+  font-family: var(--global-font-main);
+  color: var(--global-red-color);
+  font-size: 18px;
+}
