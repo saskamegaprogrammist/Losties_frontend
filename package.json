@@ -4,8 +4,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"long comment \"",
-    "start": "nodemon server/server.js",
-    "vercel-start": "node server/server.js",
+    "start": "nodemon .",
+    "now-start": "node server/server.js",
     "prestart": "webpack-cli"
   },
   "repository": {
