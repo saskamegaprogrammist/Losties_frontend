@@ -1,11 +1,11 @@
 {
-  "name": "Losties",
+  "name": "losties",
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "echo \"long comment \"",
     "start": "nodemon .",
-    "now-start": "node server/server.js",
+    "vercel-start": "node server/server.js",
     "prestart": "webpack-cli"
   },
   "repository": {
