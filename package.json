@@ -8,6 +8,10 @@
     "now-start": "node server/server.js",
     "prestart": "webpack-cli"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saskamegaprogrammist/Losties_frontend"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
